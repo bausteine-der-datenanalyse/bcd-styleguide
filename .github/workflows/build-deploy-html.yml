@@ -42,6 +42,7 @@ jobs:
             any::ggplot2
             any::curl
             any::httr
+            any::reticulate
             any::tidyverse
             any::kableExtra
             any::janitor
