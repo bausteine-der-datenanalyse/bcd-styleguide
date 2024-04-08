@@ -185,7 +185,7 @@ urldate = {2024-02-27}
 
 Quarto nutzt Pandoc zur Formatierung von Zitaten und Quellennachweisen. Pandoc nutzt standardmäßig den [Chicago-Stil](https://www.chicagomanualofstyle.org/tools_citationguide.html), das Nachweise im Nummern- und im Autor-Jahr-System definiert. *In den Bausteinen werden Quellen im Autor-Jahr-System CMOS nachgewiesen.*
 
-Ziterstil
+Zitierstil
 : *Autor-Jahr-System* `biblio-style: authoryear` [CMOS Kurzanleitung](https://www.scribbr.com/chicago-style/author-date/)
 
 &nbsp;
@@ -249,6 +249,46 @@ R-Code wird mit Knitr verarbeitet. Dazu muss eine lokale Installation von R vorh
 ## Text
 Regulärer Text wird in [Markdownsyntax](https://quarto.org/docs/authoring/markdown-basics.html#overview) durch Sonderzeichen formatiert. Diese Sonderzeichen können durch ein vorangestellte Backslash `\` in der Ausgabe sichtbar gemacht werden. 
 
+### Stylesheets
+Mithilfe von eigenen Stylesheets in Form von .css oder .scss-Dateien lassen sich eine Vielzahl an Layoutoptionen in der HTML-Ausgabe anpassen [Beispielonlinequelle. Nicht-kommerzielle Alternative?](https://www.w3schools.com/css/css_text.asp). Eine simple Einstellung wie 
+
+``` {css}
+.neuer-begriff { 
+    color: green; 
+    font-weight: bold; 
+}
+```
+sorgt dafür, dass einzelne Wörter durch Verwendung von `[Beispielwort]{.neuer-begriff}` grün eingefärbt werden und fett gedruckt sind. Dabei werden die Eigenschaften der geschweiften Klammer auf alle Inhalte der eckigen Klammer angewendet. Änderungen in der .css-Datei werden dann global auf alle Elemente angewendet, sodass diese nicht einzeln geändert werden müssen. Die Verwendung einer .css-Datei kann im YAML-Header geregelt werden.
+
+```
+format:
+  html: 
+    css: cssdatei.css
+```
+
+Damit diese Elemente auch in der PDF-Ausgabe funktionieren können diese Einstellungen analog in LaTeX definiert werden:
+``` {tex}
+\newcommand{\neuerbegriff}{\textcolor{green}
+```
+(Anmerkung: Dieses Beispiel ist lediglich grün, aber nicht fett gedruckt.)
+Auch diese Verwendung wird über den YAML-Header geregelt.
+
+```
+format:
+  pdf: 
+    include-in-header:
+      - macros.tex
+```
+
+Für eine fortgeschrittene Anwendungsmöglichkeit siehe @sec-callout-custom.
+Eine kleine Auswahl an Beispielen für Stylesheets anderer Projekte mit unterschiedlichem Grad an Komplexität können hier gefunden werden:
+
+- [R for data science](https://github.com/hadley/r4ds/blob/main/r4ds.scss)
+
+- [Introduction to Modern Statistics HTML Stylesheet](https://github.com/OpenIntroStat/ims/blob/main/scss/ims-style.scss)
+
+- [Introduction to Modern Statistics PDF/LaTeX Stylesheet](https://github.com/OpenIntroStat/ims/blob/main/latex/ims-style.tex)
+
 ### Callout Blocks
 Callout Blocks eignen sich inbesondere dazu, textuelle Inhalte hervorzuheben. Callout Blocks können umfangreich angepasst werden und Elemente wie Grafiken oder Code-Blöcke enthalten.  Die Typen werden mit der Spracheinstellung im YAML-Header `lang: de` lokalisiert.
 
@@ -303,7 +343,7 @@ Die erste Überschrift im Markdownformat wird als Titel benutzt, wenn keiner spe
 
 Siehe dazu: [Quarto Callout Blocks](https://quarto.org/docs/authoring/callouts.html)
 
-#### Definieren von eigenen Callout Umgebungen
+#### Definieren von eigenen Callout Umgebungen {#sec-callout-custom}
 
 Mit folgendem Vorgehen lassen sich eigene Callout-Umgebungen definieren wobei diese zum jetzigen Stand (April 2024) in der PDF farblich nicht anpassbar sind. 
 
@@ -318,7 +358,7 @@ _quart.yml
 mein_dokument.qmd
 ```
 
-Die *_extension.yml* listet dabei alle benutzen Filter auf, in diesem Fall *callout_definition.lua*. Hier lässt sich auch eine *.scss* Datei unterbringen, in der die Änderungen am aussehen der HTML gepeichtert sind. Diese werden dann in der Haupt yaml Datei mit *courseformat-html* aufgerufen.
+Die *_extension.yml* listet dabei alle benutzen Filter auf, in diesem Fall *callout_definition.lua*. Hier lässt sich auch eine *.scss* Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichtert sind. Diese werden dann in der Haupt yaml Datei mit *courseformat-html* aufgerufen.
 
 ```{yaml}
 title: Course Page Format
@@ -355,7 +395,7 @@ function Div(div)
   end
 end
 ```
-In der *theme.scss* wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt findet sich das Resultat nur in HTML-Ausgabe und nicht in der PDF. Über die Hexadezinalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeivhen für eine Warnung-Umgebung) festlegen. Dabei wird auf die *Font Awesome*-Bibliothek zurück gegriffen.
+In der *theme.scss* wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt findet sich das Resultat nur in HTML-Ausgabe und nicht in der PDF. Über die Hexadezimalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeichen für eine Warnung-Umgebung) festlegen. Dabei wird auf die *Font Awesome*-Bibliothek zurückgegriffen.
 
 ```{scss}
 /*-- Importing fa icons --*/
@@ -594,7 +634,10 @@ format:
 ```
 #| fig-cap: "Beschriftung"
 #| label: fig-ID
-#| fig-alt: "Alternativtext" 
+#| fig-alt: "Alternativtext"
+#| fig-width: "Breite der Grafik als lokale Einstellung, in der Priorität über globaler Einstellung im YAML-Header"
+#| fig-height: "Höhe der Grafik als lokale Einstellung, in der Priorität über globaler Einstellung im YAML-Header"
+#| fig-asp: "Seitenverhältnis der Grafik als lokale Einstellung, in der Priorität über globaler Einstellung im YAML-Header"
 ```
 
 ### Mehrsprachige Codebeispiele
