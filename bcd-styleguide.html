@@ -152,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">8. April 2024</p>
+      <p class="date">9. April 2024</p>
     </div>
   </div>
   
@@ -429,9 +429,7 @@ Hinweis
   html: 
     css: cssdatei.css</code></pre>
 <p>Damit diese Elemente auch in der PDF-Ausgabe funktionieren können diese Einstellungen analog in LaTeX definiert werden:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\neuerbegriff</span>}{<span class="fu">\textcolor</span>{green}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\neuerbegriff</span>}{<span class="fu">\textcolor</span>{green}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>(Anmerkung: Dieses Beispiel ist lediglich grün, aber nicht fett gedruckt.) Auch diese Verwendung wird über den YAML-Header geregelt.</p>
 <pre><code>format:
   pdf: 
@@ -591,8 +589,7 @@ Das Symbol kann unterdrückt werden
 _quart.yml
 mein_dokument.qmd</code></pre>
 <p>Die *_extension.yml* listet dabei alle benutzen Filter auf, in diesem Fall <em>callout_definition.lua</em>. Hier lässt sich auch eine <em>.scss</em> Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichtert sind. Diese werden dann in der Haupt yaml Datei mit <em>courseformat-html</em> aufgerufen.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Course Page Format</span></span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Course Page Format</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Marc Fehr</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0.0</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">contributes</span><span class="kw">:</span></span>
@@ -601,10 +598,8 @@ mein_dokument.qmd</code></pre>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> theme.scss</span><span class="kw">]</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">filters</span><span class="kw">:</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> callout_definition.lua</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Die Deifnition des Filters und damit der eigenen Callout Umgebung sieht folgendermaßen aus:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Div<span class="op">(</span><span class="va">div</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb13"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Div<span class="op">(</span><span class="va">div</span><span class="op">)</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- process exercise</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">div</span><span class="op">.</span><span class="va">classes</span><span class="op">:</span>includes<span class="op">(</span><span class="st">"callout-definition"</span><span class="op">)</span> <span class="cf">then</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- default title</span></span>
@@ -623,7 +618,6 @@ mein_dokument.qmd</code></pre>
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>In der <em>theme.scss</em> wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt findet sich das Resultat nur in HTML-Ausgabe und nicht in der PDF. Über die Hexadezimalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeichen für eine Warnung-Umgebung) festlegen. Dabei wird auf die <em>Font Awesome</em>-Bibliothek zurückgegriffen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- Importing fa icons --*/</span></span>
@@ -886,14 +880,12 @@ Hinweis
 </dd>
 </dl>
 <p>Die Syntax zur Einbindung von Videos lautet:</p>
-<div class="cell">
-<pre class="raw cell-code"><code># Allgemein
-{{&lt; video Dateipfad &gt;}}
+<pre class="raw"><code># Allgemein
+
 
 # Beispiel
-{{&lt; video videos/hermione-slow-clap.mp4 &gt;}}</code></pre>
-</div>
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="Videos/hermione-slow-clap.mp4"></video></div>
+</code></pre>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="Videos/hermione-slow-clap.mp4"></video></div>
 <p>(lizenzfreies Beispiel einfügen)</p>
 </section>
 <section id="programmcode-1" class="level2" data-number="4.4">
@@ -909,12 +901,16 @@ Hinweis
 </div>
 <p>Dabei können verschiedene <em>Flags</em> gesetzt werden. Diese Flags können entweder lokal in der Programmierumgebung oder aber global in der yml-Datei gesetzt werden.</p>
 <p>Mit <em>#| echo: false</em> (standartmäßig <strong>true</strong>) kann die Ausgabe des Codes unterdrückt werden. Es wird im Ausgabedokument dann auch nur die Ausgabe des Codes dargestellt.</p>
-<div class="cell">
-<pre class="quarto cell-code"><code>```{python}
-#| echo: false
-print("Hallo Welt")
-```</code></pre>
-</div>
+<pre class="quarto"><code>::: {.cell}
+::: {.cell-output .cell-output-stdout}
+
+```
+Hallo Welt
+```
+
+
+:::
+:::</code></pre>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo Welt</code></pre>
@@ -1437,6 +1433,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 <script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
+<script>videojs(video_shortcode_videojs_video3);</script>
 
 
 

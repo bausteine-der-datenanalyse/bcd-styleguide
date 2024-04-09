@@ -267,7 +267,7 @@ format:
 ```
 
 Damit diese Elemente auch in der PDF-Ausgabe funktionieren können diese Einstellungen analog in LaTeX definiert werden:
-``` {tex}
+``` {.tex}
 \newcommand{\neuerbegriff}{\textcolor{green}
 ```
 (Anmerkung: Dieses Beispiel ist lediglich grün, aber nicht fett gedruckt.)
@@ -360,7 +360,7 @@ mein_dokument.qmd
 
 Die *_extension.yml* listet dabei alle benutzen Filter auf, in diesem Fall *callout_definition.lua*. Hier lässt sich auch eine *.scss* Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichtert sind. Diese werden dann in der Haupt yaml Datei mit *courseformat-html* aufgerufen.
 
-```{yaml}
+```{.yaml}
 title: Course Page Format
 author: Marc Fehr
 version: 1.0.0
@@ -374,7 +374,7 @@ contributes:
 
 Die Deifnition des Filters und damit der eigenen Callout Umgebung sieht folgendermaßen aus:
 
-```{lua}
+```{.lua}
 function Div(div)
   -- process exercise
   if div.classes:includes("callout-definition") then
@@ -566,7 +566,7 @@ Speicherort von Videos
 : *Unterordner im Arbeitsverzeichnis "videos"*
 
 Die Syntax zur Einbindung von Videos lautet:  
-```{raw}
+```{.raw}
 # Allgemein
 {{< video Dateipfad >}}
 
@@ -592,7 +592,7 @@ Dabei können verschiedene *Flags* gesetzt werden. Diese Flags können entweder 
 
 Mit *#| echo: false* (standartmäßig **true**) kann die Ausgabe des Codes unterdrückt werden. Es wird im Ausgabedokument dann auch nur die Ausgabe des Codes dargestellt.
 
-````{quarto}
+````{.quarto}
 ```{python}
 #| echo: false
 print("Hallo Welt")
