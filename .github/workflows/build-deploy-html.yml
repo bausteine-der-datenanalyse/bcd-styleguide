@@ -51,6 +51,7 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
+          tinytex: true
           version: 1.4.551
 
       # Render HTML target to GH pages, use all issue-*.qmd files
