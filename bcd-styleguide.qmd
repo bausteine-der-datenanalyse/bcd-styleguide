@@ -2,10 +2,19 @@
 # Metadaten / meta data
 title: "Bausteine Computergestützter Datenanalyse"
 subtitle: "Leitfaden zur Erstellung von Bausteinen"
-author: "Maik Poetzsch"
+author:
+  - Lukas Arnold
+  - Simone Arnold
+  - Florian Bagemihl
+  - Matthias Baitsch
+  - Marc Fehr
+  - Maik Poetzsch
+  - Sebastian Seipel
 date: today # "2024-03-05" Jahr-Monat-Tag / year-month-day
 
 # Dokumenteneinstellungen / document options
+engine: knitr # für mit CSS zentrierten Text und eine einheitliche Codeausführung - u. U. nicht mehr zeitgemäß
+
 ## Spracheinstellungen / language settings
 lang: de
 # crossref: 
@@ -63,7 +72,7 @@ p {
 :::: {layout="[20, 80]"}
 ![](grafiken/CC-BY) <!-- Grafik ohne Titel und Dateiendung einbinden -->  
 
-Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen von Maik Poetzsch ist lizensiert unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). Das Werk ist abrufbar unter \<*Platzhalter*\>. Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024
+Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen von Lukas Arnold, Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und Sebastian Seipel ist lizensiert unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). Das Werk ist abrufbar auf [GitHub](https://github.com/bausteine-der-datenanalyse/bcd-styleguide). Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024
 
 ::::
 
@@ -86,8 +95,6 @@ Um Bausteine zu bearbeiten oder eigene Bausteine im Stil von BCD zu erstellen, b
 * die für die jeweilige Programmiersprache verwendeten Pakete. 
 
 Siehe: [Quarto Get Started](https://quarto.org/docs/get-started/)
-
-... Input von Marc Sönnecken
 
 # Quarto Markdown Dateien {#sec-Quarto-Markdown-Dateien}
 Quarto Markdown Dateien bestehen aus zwei Teilen: Dem YAML-Header und dem in Quarto Markdown geschriebenen Inhalt.
@@ -119,7 +126,8 @@ format:
     option: parameter
 ```
 
-::: {.callout-note}
+:::{.callout-warning appearance="simple"}
+# Hinweis
 **Ggf. ergänzen: Formatierung mit CSL-Datei**
 :::
 
@@ -134,8 +142,9 @@ language:
     toc-title: Contents # title for table of contents
 ```
 
-::: {.callout-note}
-*Hinweis: `lang` ersetzt die einzelne Konfiguration über crossref.*
+:::{.callout-warning appearance="simple"}
+# Hinweis
+*`lang` ersetzt die einzelne Konfiguration über crossref.*
 ```
 crossref: 
   fig-title: Abbildung
@@ -187,16 +196,18 @@ Quarto nutzt Pandoc zur Formatierung von Zitaten und Quellennachweisen. Pandoc n
 
 Zitierstil
 : *Autor-Jahr-System* `biblio-style: authoryear` [CMOS Kurzanleitung](https://www.scribbr.com/chicago-style/author-date/)
+: `@Hemingway1952` @Hemingway1952
+: `[@Hemingway1952]` [@Hemingway1952]
 
 &nbsp;
 
-::: {.callout-note}
-Hinweis: Das Erscheinungsbild des Quellenverzeichnisses unterscheidet sich in HTML und PDF leicht. 
+:::{.callout-warning appearance="simple"}
+# Hinweis
+Das Erscheinungsbild des Quellenverzeichnisses unterscheidet sich in HTML und PDF leicht. 
 
 *Ergänzen: bausteinübergreifende Quellenverwaltung.*  
 Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.
 :::
-
 
 ## Quarto Markdown
 Quarto Markdown ist eine Erweiterung von Markdown, einer maschinenlesbaren Auszeichnungssprache für die Formatierung von Texten und weiteren Elementen wie Grafiken oder Programmcode. Eine Übersicht über die von Quarto Markdown unterstützten Formate bieten die [Quarto Hilfeseiten](https://quarto.org/docs/guide/). Quarto Markdown basiert auf Pandoc. Das [Pandoc Handbuch](https://pandoc.org/MANUAL.html#pandocs-markdown) kann bei spezifischen Fragen oder Problemen weiterhelfen.
@@ -242,7 +253,8 @@ R-Code wird mit Knitr verarbeitet. Dazu muss eine lokale Installation von R vorh
 
 # Gestaltung von Elementen {#sec-Elemente}
 
-::: {.callout-note}
+:::{.callout-warning appearance="simple"}
+# Hinweis
 *Ggf ergänzen: Verwendung einer mystyle.css*
 :::
 
@@ -268,7 +280,7 @@ format:
 
 Damit diese Elemente auch in der PDF-Ausgabe funktionieren können diese Einstellungen analog in LaTeX definiert werden:
 ``` {.tex}
-\newcommand{\neuerbegriff}{\textcolor{green}
+\newcommand{\neuerbegriff}{\textcolor{green}}
 ```
 (Anmerkung: Dieses Beispiel ist lediglich grün, aber nicht fett gedruckt.)
 Auch diese Verwendung wird über den YAML-Header geregelt.
@@ -343,7 +355,7 @@ Die erste Überschrift im Markdownformat wird als Titel benutzt, wenn keiner spe
 
 Siehe dazu: [Quarto Callout Blocks](https://quarto.org/docs/authoring/callouts.html)
 
-#### Definieren von eigenen Callout Umgebungen {#sec-callout-custom}
+#### Definieren von eigenen Callout-Umgebungen {#sec-callout-custom}
 
 Mit folgendem Vorgehen lassen sich eigene Callout-Umgebungen definieren wobei diese zum jetzigen Stand (April 2024) in der PDF farblich nicht anpassbar sind. 
 
@@ -358,7 +370,8 @@ _quart.yml
 mein_dokument.qmd
 ```
 
-Die *_extension.yml* listet dabei alle benutzen Filter auf, in diesem Fall *callout_definition.lua*. Hier lässt sich auch eine *.scss* Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichtert sind. Diese werden dann in der Haupt yaml Datei mit *courseformat-html* aufgerufen.
+Die _*extension.yml* listet dabei alle benutzten Filter auf, in diesem Fall *callout_definition.lua*. Hier lässt sich auch eine *.scss* Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichert sind. Diese werden dann in der Haupt yaml Datei mit *courseformat-html* aufgerufen.
+
 
 ```{.yaml}
 title: Course Page Format
@@ -372,7 +385,7 @@ contributes:
     - callout_definition.lua
 ```
 
-Die Deifnition des Filters und damit der eigenen Callout Umgebung sieht folgendermaßen aus:
+Die Definition des Filters und damit der eigenen Callout-Umgebung sieht folgendermaßen aus:
 
 ```{.lua}
 function Div(div)
@@ -395,7 +408,7 @@ function Div(div)
   end
 end
 ```
-In der *theme.scss* wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt findet sich das Resultat nur in HTML-Ausgabe und nicht in der PDF. Über die Hexadezimalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeichen für eine Warnung-Umgebung) festlegen. Dabei wird auf die *Font Awesome*-Bibliothek zurückgegriffen.
+In der *theme.scss* wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt, findet sich das Resultat nur in der HTML-Ausgabe und nicht in der PDF. Über die Hexadezimalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher Callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeichen für eine Warnung-Umgebung) festlegen. Dabei wird auf die *Font Awesome*-Bibliothek zurückgegriffen.
 
 ```{scss}
 /*-- Importing fa icons --*/
@@ -459,7 +472,7 @@ Mit der ID kann ein Querverweis auf die Abbildung gesetzt werden: `@fig-programm
 
 Sowohl die ID der Grafik als auch der Querverweis beinhalten ein Präfix, das den Typ des Elements ausweist. 
 
-:::{.callout-note title="Reservierte Präfixe"}
+:::{.callout-warning appearance="simple" title="Hinweis Reservierte Präfixe"}
 In Quarto sind verschiedene Präfixe für die Erstellung von Querverweisen reserviert: fig, tbl, lst, tip, nte, wrn, imp, cau, thm, lem, cor, prp, cnj, def, exm, exr, sol, rem, eq, sec.
 :::
 
@@ -508,12 +521,13 @@ Grafikoptionen können global im YAML-Header definiert werden.
 
 ```
 ---
-cap-location: top
+cap-location: bottom
 fig-align: center
 ---
 ```
 
-::: {.callout-note}
+:::{.callout-warning appearance="simple"}
+# Hinweis
 :::: {layout="[20, 80]"}
 ![](grafiken/working_code_CC0){fig-alt="Eine Person programmiert am Computer"}
 
@@ -529,8 +543,17 @@ Grafikoptionen können auch elementweise gesetzt werden. Optionen für einzelne 
 
 Grafiken
 : *Globale Einstellungen zentriert* `fig-align: center`
-: Beschriftung unterhalb `cap-location: bottom` (default)
+: Beschriftung unterhalb `cap-location: bottom`
 : *Einbindung mit* `#fig-ID` *und Alternativtext* `fig-alt="Alternativtext"` *(ausgenommen dekorative Grafiken)*
+
+### Dekorative Grafiken
+*Dekorative Grafiken werden ohne `fig-ID` eingebunden und erhalten ein Leerzeichen als Titel: `[&nbsp;](grafiken/Dateipfad)`. Dekorative Grafiken werden nicht im Quellenverzeichnis nachgewiesen, um dieses nicht mit inhaltlich nicht relevanten Quellen zu überladen. Dekorative Grafiken erhalten einen Lizenzhinweis nach der TULLU(BA)-Regel in einer Div `::: {.border}`.*
+
+![&nbsp;](grafiken/festmahl-PCL){fig-alt="Dekoratives Bild einer am gedeckten Tisch sitzenden Gesellschaft aus vier Personen. Ein Mann ist aufgestanden, um einen Toast auszusprechen." width="50%"}
+
+::: {.border}
+Toast Dining Eating von OpenClipart-Vectors ist lizensiert unter [Pixabay Content License](https://pixabay.com/service/license-summary/). Das Werk ist abrufbar auf [Pixabay](https://pixabay.com/vectors/toast-dining-eating-event-festive-153723/).
+:::
 
 ### BCD Nutzung von Vektorgrafiken
 Die Bausteine sind für den Export in HTML und PDF konzipiert. Der Export von Grafiken nach PDF erfolgt über LaTeX und eine PDF-Renderengine. Somit werden nur Formate unterstützt, die in LaTex und in PDF unterstützt werden. Dies betrifft insbesondere
@@ -554,29 +577,51 @@ format:
     default-image-extension: pdf
 ```
 
-::: {.callout-note}
+:::{.callout-warning appearance="simple"}
+# Hinweis
 Auf GitHub wandelt ein Skript alle SVG-Grafiken automatisch in PDF um. 
 :::
 
-### Ggf. ergänzen: Flussdiagramme
-Flussdiagramme siehe <https://quarto.org/docs/authoring/markdown-basics.html#diagrams>
+### Flussdiagramme
+Quarto unterstützt Graphviz und Mermaid zur Erzeugung von [Flussdiagrammen](https://quarto.org/docs/authoring/markdown-basics.html#diagrams). Wird Mermaid verwendet, sollte im YAML-Header ein alternatives theme konfiguriert werden, da das default theme sehr dunkle subgraphs erzeugt:
 
-## Videos
+```
+mermaid: 
+  theme: neutral 
+
+```
+
+## Videos und H5P-Elemente
 Speicherort von Videos
 : *Unterordner im Arbeitsverzeichnis "videos"*
 
-Die Syntax zur Einbindung von Videos lautet:  
-```{.raw}
+Die Syntax zur Einbindung von Videos lautet: 
+
+```{raw}
 # Allgemein
 {{< video Dateipfad >}}
 
 # Beispiel
-{{< video videos/hermione-slow-clap.mp4 >}}
+{{< video https://www.youtube.com/watch?v=EImihZVE0sA >}}
+
 ```
 
-{{< video Videos/hermione-slow-clap.mp4 >}}
+::: {.border}
+{{< video https://www.youtube.com/watch?v=EImihZVE0sA >}}
 
-(lizenzfreies Beispiel einfügen)
+Open Educational Resources concept: What is an OER? von UNESCO ist lizensiert unter [CC-BY]( https://creativecommons.org/licenses/by/4.0/). Das Werk ist abrufbar auf [YouTube](https://www.youtube.com/watch?v=EImihZVE0sA).
+
+:::
+
+&nbsp;
+
+### H5P-Elemente {-}
+H5P-Elemente können exportiert als all-in-one HTML file eingebunden werden. Die Syntax lautet:
+
+```{.raw}
+{=html}
+{{< include Beispiel.html >}}
+```
 
 ## Programmcode
 
@@ -603,7 +648,7 @@ print("Hallo Welt")
 print("Hallo Welt")
 ```
 
-Im Gegensatz dazu bestimmt *#| output: false* (standartmäßig **true**) ob die Ausgabe des Codes dargestellt werden soll. Mit *#| output: asis* wird der Ouput als runformatiert als reine Textausgabe dargestellt:
+Im Gegensatz dazu bestimmt *#| output: false* (standartmäßig **true**) ob die Ausgabe des Codes dargestellt werden soll. Mit *#| output: asis* wird der Ouput als unformatierter Text dargestellt:
 
 ```{python}
 #| echo: fenced
@@ -664,13 +709,6 @@ print(getwd())
 
 :::
 
-::: {.callout-tip collapse="true"}
-# Zusammenspiel von Python und R in Quarto
-
-Wird ein Block mit R-Code in ein Dokument eingefügt, wird dieses mit Knitr gerendert. Python-Code wird über das Paket 'reticulate' mit Knitr verarbeitet. 
-:::
-
-
 # Aufbau der Bausteine
 Die Bausteine folgen einem einheitlichen Aufbau:
 
@@ -713,4 +751,6 @@ Eine Alternative zum Gendern mit Doppelpunkt ist die Verlaufsform, z. B. "Studie
 Siehe [Checklisten Barrierefreiheit](https://digitale-lehre.uni-siegen.de/wp-content/uploads/2023/09/Checkliste_Barrierefreiheit-in-der-digitalen-Lehre_Sept23.pdf)
 Checklisten: Barrierefreiheit in der digitalen Lehre. Hochschuldidaktik im digitalen Zeitalter.nrw; Kompetenzzentrum digitale Barrierefreiheit.nrw. CC BY 4.0.
 
-
+# Quellenverzeichnis {-}
+::: {#refs}
+:::
