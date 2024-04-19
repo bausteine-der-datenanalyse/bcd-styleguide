@@ -29,7 +29,7 @@ format:
   pdf:
     cite-method: biblatex
     biblio-title: Quellen
-    default-image-extension: pdf # Vektorgrafiken werden als PDF eingebunden / vector grafics are embedded as PDF
+    # default-image-extension: pdf # Vektorgrafiken werden als PDF eingebunden / vector grafics are embedded as PDF
 
 ## Inhaltsverzeichnis / table of contents
 toc: true
@@ -549,7 +549,7 @@ Grafiken
 ### Dekorative Grafiken
 *Dekorative Grafiken werden ohne `fig-ID` eingebunden und erhalten ein Leerzeichen als Titel: `[&nbsp;](grafiken/Dateipfad)`. Dekorative Grafiken werden nicht im Quellenverzeichnis nachgewiesen, um dieses nicht mit inhaltlich nicht relevanten Quellen zu überladen. Dekorative Grafiken erhalten einen Lizenzhinweis nach der TULLU(BA)-Regel in einer Div `::: {.border}`.*
 
-![&nbsp;](grafiken/festmahl-PCL){fig-alt="Dekoratives Bild einer am gedeckten Tisch sitzenden Gesellschaft aus vier Personen. Ein Mann ist aufgestanden, um einen Toast auszusprechen." width="50%"}
+![&nbsp;](grafiken/festmahl-PCL.svg){fig-alt="Dekoratives Bild einer am gedeckten Tisch sitzenden Gesellschaft aus vier Personen. Ein Mann ist aufgestanden, um einen Toast auszusprechen." width="50%"}
 
 ::: {.border}
 Toast Dining Eating von OpenClipart-Vectors ist lizensiert unter [Pixabay Content License](https://pixabay.com/service/license-summary/). Das Werk ist abrufbar auf [Pixabay](https://pixabay.com/vectors/toast-dining-eating-event-festive-153723/).
