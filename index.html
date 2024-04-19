@@ -2,11 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lukas Arnold">
+<meta name="author" content="Simone Arnold">
+<meta name="author" content="Florian Bagemihl">
+<meta name="author" content="Matthias Baitsch">
+<meta name="author" content="Marc Fehr">
 <meta name="author" content="Maik Poetzsch">
+<meta name="author" content="Sebastian Seipel">
 
 <title>Bausteine Computergestützter Datenanalyse</title>
 <style>
@@ -55,7 +61,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="bcd-styleguide_files/libs/clipboard/clipboard.min.js"></script>
@@ -68,8 +94,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="bcd-styleguide_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="bcd-styleguide_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="bcd-styleguide_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="bcd-styleguide_files/libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="bcd-styleguide_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 
 
 </head>
@@ -110,10 +134,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#grafiken" id="toc-grafiken" class="nav-link" data-scroll-target="#grafiken"><span class="header-section-number">4.2</span> Grafiken</a>
   <ul class="collapse">
   <li><a href="#grafikoptionen" id="toc-grafikoptionen" class="nav-link" data-scroll-target="#grafikoptionen">Grafikoptionen</a></li>
+  <li><a href="#dekorative-grafiken" id="toc-dekorative-grafiken" class="nav-link" data-scroll-target="#dekorative-grafiken">Dekorative Grafiken</a></li>
   <li><a href="#bcd-nutzung-von-vektorgrafiken" id="toc-bcd-nutzung-von-vektorgrafiken" class="nav-link" data-scroll-target="#bcd-nutzung-von-vektorgrafiken">BCD Nutzung von Vektorgrafiken</a></li>
-  <li><a href="#ggf.-ergänzen-flussdiagramme" id="toc-ggf.-ergänzen-flussdiagramme" class="nav-link" data-scroll-target="#ggf.-ergänzen-flussdiagramme">Ggf. ergänzen: Flussdiagramme</a></li>
+  <li><a href="#flussdiagramme" id="toc-flussdiagramme" class="nav-link" data-scroll-target="#flussdiagramme">Flussdiagramme</a></li>
   </ul></li>
-  <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos"><span class="header-section-number">4.3</span> Videos</a></li>
+  <li><a href="#videos-und-h5p-elemente" id="toc-videos-und-h5p-elemente" class="nav-link" data-scroll-target="#videos-und-h5p-elemente"><span class="header-section-number">4.3</span> Videos und H5P-Elemente</a>
+  <ul class="collapse">
+  <li><a href="#h5p-elemente" id="toc-h5p-elemente" class="nav-link" data-scroll-target="#h5p-elemente">H5P-Elemente</a></li>
+  </ul></li>
   <li><a href="#programmcode-1" id="toc-programmcode-1" class="nav-link" data-scroll-target="#programmcode-1"><span class="header-section-number">4.4</span> Programmcode</a>
   <ul class="collapse">
   <li><a href="#optionen-codeblöcke-bitte-ergänzen" id="toc-optionen-codeblöcke-bitte-ergänzen" class="nav-link" data-scroll-target="#optionen-codeblöcke-bitte-ergänzen">Optionen Codeblöcke (bitte ergänzen)</a></li>
@@ -127,6 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sprache" id="toc-sprache" class="nav-link" data-scroll-target="#sprache"><span class="header-section-number">5.1</span> Sprache</a></li>
   <li><a href="#barrierefreiheit" id="toc-barrierefreiheit" class="nav-link" data-scroll-target="#barrierefreiheit"><span class="header-section-number">5.2</span> Barrierefreiheit</a></li>
   </ul></li>
+  <li><a href="#quellenverzeichnis" id="toc-quellenverzeichnis" class="nav-link" data-scroll-target="#quellenverzeichnis">Quellenverzeichnis</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Andere Formate</h2><ul><li><a href="bcd-styleguide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
@@ -143,16 +172,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Autor:in</div>
+    <div class="quarto-title-meta-heading">Autor:innen</div>
     <div class="quarto-title-meta-contents">
+             <p>Lukas Arnold </p>
+             <p>Simone Arnold </p>
+             <p>Florian Bagemihl </p>
+             <p>Matthias Baitsch </p>
+             <p>Marc Fehr </p>
              <p>Maik Poetzsch </p>
+             <p>Sebastian Seipel </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">9. April 2024</p>
+      <p class="date">19. April 2024</p>
     </div>
   </div>
   
@@ -187,7 +222,7 @@ p {
 <p><img src="grafiken/CC-BY.svg" class="img-fluid"> <!-- Grafik ohne Titel und Dateiendung einbinden --></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
-<p>Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen von Maik Poetzsch ist lizensiert unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a>. Das Werk ist abrufbar unter &lt;<em>Platzhalter</em>&gt;. Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024</p>
+<p>Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen von Lukas Arnold, Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und Sebastian Seipel ist lizensiert unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a>. Das Werk ist abrufbar auf <a href="https://github.com/bausteine-der-datenanalyse/bcd-styleguide">GitHub</a>. Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024</p>
 </div>
 </div>
 </div>
@@ -211,7 +246,6 @@ p {
 <li>die für die jeweilige Programmiersprache verwendeten Pakete.</li>
 </ul>
 <p>Siehe: <a href="https://quarto.org/docs/get-started/">Quarto Get Started</a></p>
-<p>… Input von Marc Sönnecken</p>
 </section>
 <section id="sec-Quarto-Markdown-Dateien" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Quarto Markdown Dateien</h1>
@@ -239,7 +273,7 @@ date: "2024-03-05" # Jahr-Monat-Tag / year-month-day
   pdf:  
     option: parameter  
     option: parameter</code></pre>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -260,7 +294,7 @@ Hinweis
     toc-title: Inhalt # Titel des Inhaltsverzeichnisses
   en:
     toc-title: Contents # title for table of contents</code></pre>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -270,7 +304,7 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Hinweis: <code>lang</code> ersetzt die einzelne Konfiguration über crossref.</em></p>
+<p><em><code>lang</code> ersetzt die einzelne Konfiguration über crossref.</em></p>
 <pre><code>crossref: 
   fig-title: Abbildung
   fig-prefix: Abbildung
@@ -324,9 +358,15 @@ urldate = {2024-02-27}
 <dd>
 <em>Autor-Jahr-System</em> <code>biblio-style: authoryear</code> <a href="https://www.scribbr.com/chicago-style/author-date/">CMOS Kurzanleitung</a>
 </dd>
+<dd>
+<code>@Hemingway1952</code> <span class="citation" data-cites="Hemingway1952">Hemingway (<a href="#ref-Hemingway1952" role="doc-biblioref">1952</a>)</span>
+</dd>
+<dd>
+<code>[@Hemingway1952]</code> <span class="citation" data-cites="Hemingway1952">(<a href="#ref-Hemingway1952" role="doc-biblioref">Hemingway 1952</a>)</span>
+</dd>
 </dl>
 <p>&nbsp;</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -336,7 +376,7 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Hinweis: Das Erscheinungsbild des Quellenverzeichnisses unterscheidet sich in HTML und PDF leicht.</p>
+<p>Das Erscheinungsbild des Quellenverzeichnisses unterscheidet sich in HTML und PDF leicht.</p>
 <p><em>Ergänzen: bausteinübergreifende Quellenverwaltung.</em><br>
 Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 </div>
@@ -393,7 +433,7 @@ Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 </section>
 <section id="sec-Elemente" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Gestaltung von Elementen</h1>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -429,7 +469,7 @@ Hinweis
   html: 
     css: cssdatei.css</code></pre>
 <p>Damit diese Elemente auch in der PDF-Ausgabe funktionieren können diese Einstellungen analog in LaTeX definiert werden:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\neuerbegriff</span>}{<span class="fu">\textcolor</span>{green}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\neuerbegriff</span>}{<span class="fu">\textcolor</span>{green}}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>(Anmerkung: Dieses Beispiel ist lediglich grün, aber nicht fett gedruckt.) Auch diese Verwendung wird über den YAML-Header geregelt.</p>
 <pre><code>format:
   pdf: 
@@ -579,7 +619,7 @@ Das Symbol kann unterdrückt werden
 </div>
 <p>Siehe dazu: <a href="https://quarto.org/docs/authoring/callouts.html">Quarto Callout Blocks</a></p>
 <section id="sec-callout-custom" class="level4">
-<h4 class="anchored" data-anchor-id="sec-callout-custom">Definieren von eigenen Callout Umgebungen</h4>
+<h4 class="anchored" data-anchor-id="sec-callout-custom">Definieren von eigenen Callout-Umgebungen</h4>
 <p>Mit folgendem Vorgehen lassen sich eigene Callout-Umgebungen definieren wobei diese zum jetzigen Stand (April 2024) in der PDF farblich nicht anpassbar sind.</p>
 <p>Zu erst wird eine Ordnerstruktur für Quarto-Erweiterungen benötigt:</p>
 <pre><code>_extension
@@ -588,7 +628,7 @@ Das Symbol kann unterdrückt werden
   - theme.scss
 _quart.yml
 mein_dokument.qmd</code></pre>
-<p>Die *_extension.yml* listet dabei alle benutzen Filter auf, in diesem Fall <em>callout_definition.lua</em>. Hier lässt sich auch eine <em>.scss</em> Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichtert sind. Diese werden dann in der Haupt yaml Datei mit <em>courseformat-html</em> aufgerufen.</p>
+<p>Die _<em>extension.yml</em> listet dabei alle benutzten Filter auf, in diesem Fall <em>callout_definition.lua</em>. Hier lässt sich auch eine <em>.scss</em> Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichert sind. Diese werden dann in der Haupt yaml Datei mit <em>courseformat-html</em> aufgerufen.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Course Page Format</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Marc Fehr</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0.0</span></span>
@@ -598,7 +638,7 @@ mein_dokument.qmd</code></pre>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> theme.scss</span><span class="kw">]</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">filters</span><span class="kw">:</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> callout_definition.lua</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Die Deifnition des Filters und damit der eigenen Callout Umgebung sieht folgendermaßen aus:</p>
+<p>Die Definition des Filters und damit der eigenen Callout-Umgebung sieht folgendermaßen aus:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Div<span class="op">(</span><span class="va">div</span><span class="op">)</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- process exercise</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">div</span><span class="op">.</span><span class="va">classes</span><span class="op">:</span>includes<span class="op">(</span><span class="st">"callout-definition"</span><span class="op">)</span> <span class="cf">then</span></span>
@@ -618,7 +658,7 @@ mein_dokument.qmd</code></pre>
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In der <em>theme.scss</em> wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt findet sich das Resultat nur in HTML-Ausgabe und nicht in der PDF. Über die Hexadezimalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeichen für eine Warnung-Umgebung) festlegen. Dabei wird auf die <em>Font Awesome</em>-Bibliothek zurückgegriffen.</p>
+<p>In der <em>theme.scss</em> wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt, findet sich das Resultat nur in der HTML-Ausgabe und nicht in der PDF. Über die Hexadezimalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher Callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeichen für eine Warnung-Umgebung) festlegen. Dabei wird auf die <em>Font Awesome</em>-Bibliothek zurückgegriffen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- Importing fa icons --*/</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"</span><span class="fu">)</span><span class="op">;</span></span>
@@ -726,13 +766,13 @@ Abbildung&nbsp;1
 </div>
 <p>Mit der ID kann ein Querverweis auf die Abbildung gesetzt werden: <code>@fig-programmieren</code> erzeugt den Querverweis <a href="#fig-programmieren" class="quarto-xref">Abbildung&nbsp;1</a>. Der Verweistext kann angepasst werden: <code>[Grafik @fig-programmieren]</code> erzeugt den Querverweis <a href="#fig-programmieren" class="quarto-xref">Grafik&nbsp;1</a>.</p>
 <p>Sowohl die ID der Grafik als auch der Querverweis beinhalten ein Präfix, das den Typ des Elements ausweist.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Reservierte Präfixe">
+<div class="callout callout-style-simple callout-warning callout-titled" title="Hinweis Reservierte Präfixe">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Reservierte Präfixe
+Hinweis Reservierte Präfixe
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -783,10 +823,10 @@ Arbeitsverzeichnis ermitteln
 <h3 class="anchored" data-anchor-id="grafikoptionen">Grafikoptionen</h3>
 <p>Grafikoptionen können global im YAML-Header definiert werden.</p>
 <pre><code>---
-cap-location: top
+cap-location: bottom
 fig-align: center
 ---</code></pre>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -813,7 +853,7 @@ Hinweis
 </div>
 <p>Grafikoptionen können auch elementweise gesetzt werden. Optionen für einzelne Grafiken werden in geschweiften Klammern übergeben und mehrere Optionen durch Leerzeichen voneinander getrennt. Im folgenden Beispiel wird eine <code>#fig-ID</code> vergeben, ein Alternativtext mit <code>fig-alt=""</code> angelegt, die Ausrichtung mit <code>fig-align=""</code> linksbündig sowie die Größe der Grafik mit <code>width=""</code> eingestellt. <code>width</code> stellt die Breite der Grafik ein, die Höhe wird automatisch berechnet.</p>
 <p><code>![Grafik mit elementweiser Option "left"](grafiken/working_code_CC0.png){#fig-Grafik-mit-Optionen fig-alt="Eine Person programmiert am Computer" fig-align="left" width="33%"}</code></p>
-<div id="fig-Grafik-mit-Optionen" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left" alt="Eine Person programmiert am Computer">
+<div id="fig-Grafik-mit-Optionen" class="quarto-figure quarto-figure-left quarto-float anchored" alt="Eine Person programmiert am Computer" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Grafik-mit-Optionen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="grafiken/working_code_CC0.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:33.0%" alt="Eine Person programmiert am Computer">
@@ -829,12 +869,25 @@ Abbildung&nbsp;2: Grafik mit elementweiser Option “left”
 <em>Globale Einstellungen zentriert</em> <code>fig-align: center</code>
 </dd>
 <dd>
-Beschriftung unterhalb <code>cap-location: bottom</code> (default)
+Beschriftung unterhalb <code>cap-location: bottom</code>
 </dd>
 <dd>
 <em>Einbindung mit</em> <code>#fig-ID</code> <em>und Alternativtext</em> <code>fig-alt="Alternativtext"</code> <em>(ausgenommen dekorative Grafiken)</em>
 </dd>
 </dl>
+</section>
+<section id="dekorative-grafiken" class="level3">
+<h3 class="anchored" data-anchor-id="dekorative-grafiken">Dekorative Grafiken</h3>
+<p><em>Dekorative Grafiken werden ohne <code>fig-ID</code> eingebunden und erhalten ein Leerzeichen als Titel: <code>[&amp;nbsp;](grafiken/Dateipfad)</code>. Dekorative Grafiken werden nicht im Quellenverzeichnis nachgewiesen, um dieses nicht mit inhaltlich nicht relevanten Quellen zu überladen. Dekorative Grafiken erhalten einen Lizenzhinweis nach der TULLU(BA)-Regel in einer Div <code>::: {.border}</code>.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="grafiken/festmahl-PCL.svg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>&nbsp;</figcaption>
+</figure>
+</div>
+<div class="border">
+<p>Toast Dining Eating von OpenClipart-Vectors ist lizensiert unter <a href="https://pixabay.com/service/license-summary/">Pixabay Content License</a>. Das Werk ist abrufbar auf <a href="https://pixabay.com/vectors/toast-dining-eating-event-festive-153723/">Pixabay</a>.</p>
+</div>
 </section>
 <section id="bcd-nutzung-von-vektorgrafiken" class="level3">
 <h3 class="anchored" data-anchor-id="bcd-nutzung-von-vektorgrafiken">BCD Nutzung von Vektorgrafiken</h3>
@@ -852,7 +905,7 @@ Beschriftung unterhalb <code>cap-location: bottom</code> (default)
   pdf:
     cite-method: biblatex
     default-image-extension: pdf</code></pre>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -866,13 +919,16 @@ Hinweis
 </div>
 </div>
 </section>
-<section id="ggf.-ergänzen-flussdiagramme" class="level3">
-<h3 class="anchored" data-anchor-id="ggf.-ergänzen-flussdiagramme">Ggf. ergänzen: Flussdiagramme</h3>
-<p>Flussdiagramme siehe <a href="https://quarto.org/docs/authoring/markdown-basics.html#diagrams" class="uri">https://quarto.org/docs/authoring/markdown-basics.html#diagrams</a></p>
+<section id="flussdiagramme" class="level3">
+<h3 class="anchored" data-anchor-id="flussdiagramme">Flussdiagramme</h3>
+<p>Quarto unterstützt Graphviz und Mermaid zur Erzeugung von <a href="https://quarto.org/docs/authoring/markdown-basics.html#diagrams">Flussdiagrammen</a>. Wird Mermaid verwendet, sollte im YAML-Header ein alternatives theme konfiguriert werden, da das default theme sehr dunkle subgraphs erzeugt:</p>
+<pre><code>mermaid: 
+  theme: neutral 
+</code></pre>
 </section>
 </section>
-<section id="videos" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="videos"><span class="header-section-number">4.3</span> Videos</h2>
+<section id="videos-und-h5p-elemente" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="videos-und-h5p-elemente"><span class="header-section-number">4.3</span> Videos und H5P-Elemente</h2>
 <dl>
 <dt>Speicherort von Videos</dt>
 <dd>
@@ -880,21 +936,33 @@ Hinweis
 </dd>
 </dl>
 <p>Die Syntax zur Einbindung von Videos lautet:</p>
-<pre class="raw"><code># Allgemein
-
+<div class="cell">
+<pre class="raw cell-code"><code># Allgemein
+{{&lt; video Dateipfad &gt;}}
 
 # Beispiel
+{{&lt; video https://www.youtube.com/watch?v=EImihZVE0sA &gt;}}
 </code></pre>
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="Videos/hermione-slow-clap.mp4"></video></div>
-<p>(lizenzfreies Beispiel einfügen)</p>
+</div>
+<div class="border">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/EImihZVE0sA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Open Educational Resources concept: What is an OER? von UNESCO ist lizensiert unter <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>. Das Werk ist abrufbar auf <a href="https://www.youtube.com/watch?v=EImihZVE0sA">YouTube</a>.</p>
+</div>
+<p>&nbsp;</p>
+<section id="h5p-elemente" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="h5p-elemente">H5P-Elemente</h3>
+<p>H5P-Elemente können exportiert als all-in-one HTML file eingebunden werden. Die Syntax lautet:</p>
+<pre class="raw"><code>{=html}
+{{&lt; include Beispiel.html &gt;}}</code></pre>
+</section>
 </section>
 <section id="programmcode-1" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="programmcode-1"><span class="header-section-number">4.4</span> Programmcode</h2>
 <p>Code wird mit folgender Syntax eingebunden:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo Welt</code></pre>
 </div>
@@ -916,12 +984,12 @@ Hallo Welt
 <pre><code>Hallo Welt</code></pre>
 </div>
 </div>
-<p>Im Gegensatz dazu bestimmt <em>#| output: false</em> (standartmäßig <strong>true</strong>) ob die Ausgabe des Codes dargestellt werden soll. Mit <em>#| output: asis</em> wird der Ouput als runformatiert als reine Textausgabe dargestellt:</p>
+<p>Im Gegensatz dazu bestimmt <em>#| output: false</em> (standartmäßig <strong>true</strong>) ob die Ausgabe des Codes dargestellt werden soll. Mit <em>#| output: asis</em> wird der Ouput als unformatierter Text dargestellt:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: false</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: false</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="optionen-codeblöcke-bitte-ergänzen" class="level3">
 <h3 class="anchored" data-anchor-id="optionen-codeblöcke-bitte-ergänzen">Optionen Codeblöcke (bitte ergänzen)</h3>
@@ -953,30 +1021,14 @@ Hallo Welt
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">getwd</span>())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">getwd</span>())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Zusammenspiel von Python und R in Quarto
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Wird ein Block mit R-Code in ein Dokument eingefügt, wird dieses mit Knitr gerendert. Python-Code wird über das Paket ‘reticulate’ mit Knitr verarbeitet.</p>
 </div>
 </div>
 </div>
@@ -1018,6 +1070,14 @@ Zusammenspiel von Python und R in Quarto
 <h2 data-number="5.2" class="anchored" data-anchor-id="barrierefreiheit"><span class="header-section-number">5.2</span> Barrierefreiheit</h2>
 <p>Siehe <a href="https://digitale-lehre.uni-siegen.de/wp-content/uploads/2023/09/Checkliste_Barrierefreiheit-in-der-digitalen-Lehre_Sept23.pdf">Checklisten Barrierefreiheit</a> Checklisten: Barrierefreiheit in der digitalen Lehre. Hochschuldidaktik im digitalen Zeitalter.nrw; Kompetenzzentrum digitale Barrierefreiheit.nrw. CC BY 4.0.</p>
 </section>
+</section>
+<section id="quellenverzeichnis" class="level1 unnumbered">
+<h1 class="unnumbered">Quellenverzeichnis</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Hemingway1952" class="csl-entry" role="listitem">
+Hemingway, Ernest. 1952. <em>The Old Man and the Sea</em>. Charles Scribner’s Sons. <a href="http://www.testurl.com">http://www.testurl.com</a>.
+</div>
+</div>
 </section>
 
 </main>
@@ -1432,9 +1492,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
-<script>videojs(video_shortcode_videojs_video3);</script>
 
 
 
