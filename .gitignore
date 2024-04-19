@@ -3,3 +3,10 @@
 
 # Ignore quarto build data
 /.quarto/
+
+# Ignore Latex generated files
+.bcf
+.log
+.toc
+.tex
+.aux
