@@ -366,11 +366,11 @@ _extension
   - _extension.yml
   - callout_definition.lua
   - theme.scss
-_quart.yml
+_quarto.yml
 mein_dokument.qmd
 ```
 
-Die _*extension.yml* listet dabei alle benutzten Filter auf, in diesem Fall *callout_definition.lua*. Hier lässt sich auch eine *.scss* Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichert sind. Diese werden dann in der Haupt yaml Datei mit *courseformat-html* aufgerufen.
+Die _*extension.yml* listet dabei alle benutzten Filter auf, in diesem Fall *callout_definition.lua*. Hier lässt sich auch eine *.scss* Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichert sind. Diese werden dann in der Datei _quarto.yml mit *courseformat-html* aufgerufen.
 
 
 ```{.yaml}
