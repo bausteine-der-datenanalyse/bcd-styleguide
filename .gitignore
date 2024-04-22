@@ -10,3 +10,6 @@
 .toc
 .tex
 .aux
+
+# Ignore VS Code configuration
+.vscode/
