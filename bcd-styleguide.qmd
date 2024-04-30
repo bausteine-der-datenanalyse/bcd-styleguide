@@ -558,11 +558,11 @@ Toast Dining Eating von OpenClipart-Vectors ist lizensiert unter [Pixabay Conten
 ### BCD Nutzung von Vektorgrafiken
 Die Bausteine sind für den Export in HTML und PDF konzipiert. Der Export von Grafiken nach PDF erfolgt über LaTeX und eine PDF-Renderengine. Somit werden nur Formate unterstützt, die in LaTex und in PDF unterstützt werden. Dies betrifft insbesondere
 
-  * Vektorgrafiken: Um Vektorgrafiken im Format SVG zu verarbeiten, wird die Bibliothek `Librsvg` benötigt. Siehe: [Quarto: PDF Format Improvements](https://quarto.org/docs/prerelease/1.3/pdf.html)
+  * Vektorgrafiken: Um Vektorgrafiken im Format SVG zu verarbeiten, wird die Bibliothek `Librsvg` benötigt. Siehe: [Quarto: PDF Format Improvements](https://quarto.org/docs/prerelease/1.3/pdf.html). Werden svg Graphiken mit Dateiendung (als tite.svg) eingebunden wandelt Quarto dann automatisch die BIlder in das PDF Format um.
 
   * GIF: Das PDF-Format unterstützt animierte Bilddateien nicht bzw. nur in bestimmten Kombinationen aus Renderengine und PDF Reader. Quartos Standardengine TinyteX unterstützt animierte Bilddateien nicht.
 
-*Um unabhängig vom Exportformat SVG-Dateien zu nutzen, werden diese ohne Formatendung eingebunden.*
+
 
 `![Grafiküberschrift](Unterordner/Dateiname_Dateiname Dateiname)` 
 
