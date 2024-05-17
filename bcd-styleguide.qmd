@@ -13,7 +13,7 @@ author:
 date: today # "2024-03-05" Jahr-Monat-Tag / year-month-day
 
 # Dokumenteneinstellungen / document options
-engine: knitr # für mit CSS zentrierten Text und eine einheitliche Codeausführung - u. U. nicht mehr zeitgemäß
+engine: knitr # für mit CSS zentrierten Text und eine einheitliche Codeausführung von Python und R im Styleguide - keine Relevanz für die Bausteine
 
 ## Spracheinstellungen / language settings
 lang: de
@@ -76,7 +76,20 @@ Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Baustei
 
 ::::
 
-* optional: Zitiervorschlag und BibTeX-Vorlage
+Zitiervorschlag
+
+Arnold, Lukas, Simone Arnold, Matthias Baitsch, Marc Fehr, Maik Poetzsch, und Sebastian Seipel. 2024. „Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen“. https://github.com/bausteine-der-datenanalyse/bcd-styleguide.
+
+BibTeX-Vorlage
+
+```
+@misc{BCD-Styleguide-2024,
+ title={Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen},
+ author={Arnold, Lukas and Arnold, Simone and Baitsch, Matthias and Fehr, Marc and Poetzsch, Maik and Seipel, Sebastian},
+ year={2024},
+ url={https://github.com/bausteine-der-datenanalyse/bcd-styleguide}} 
+```
+
 :::
 
 {{< pagebreak >}}
@@ -125,11 +138,6 @@ format:
     option: parameter  
     option: parameter
 ```
-
-:::{.callout-warning appearance="simple"}
-# Hinweis
-**Ggf. ergänzen: Formatierung mit CSL-Datei**
-:::
 
 #### Spracheinstellungen
 `lang: de` setzt die Dokumentensprache auf Deutsch. Die Standardeinstellung ist Englisch: `lang: en`. Weitere Einstellungen können mit `language` auch für verschiedene Sprachen vorgenommen werden. Eine Liste der Optionen findet sich [auf GitHub](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml).
@@ -253,16 +261,11 @@ R-Code wird mit Knitr verarbeitet. Dazu muss eine lokale Installation von R vorh
 
 # Gestaltung von Elementen {#sec-Elemente}
 
-:::{.callout-warning appearance="simple"}
-# Hinweis
-*Ggf ergänzen: Verwendung einer mystyle.css*
-:::
-
 ## Text
 Regulärer Text wird in [Markdownsyntax](https://quarto.org/docs/authoring/markdown-basics.html#overview) durch Sonderzeichen formatiert. Diese Sonderzeichen können durch ein vorangestellte Backslash `\` in der Ausgabe sichtbar gemacht werden. 
 
 ### Stylesheets
-Mithilfe von eigenen Stylesheets in Form von .css oder .scss-Dateien lassen sich eine Vielzahl an Layoutoptionen in der HTML-Ausgabe anpassen [Beispielonlinequelle. Nicht-kommerzielle Alternative?](https://www.w3schools.com/css/css_text.asp). Eine simple Einstellung wie 
+Mithilfe von eigenen Stylesheets in Form von .css oder .scss-Dateien lassen sich eine Vielzahl an Layoutoptionen in der HTML-Ausgabe anpassen [@W3Schools-Stylesheets]. Eine simple Einstellung wie 
 
 ``` {css}
 .neuer-begriff { 
@@ -270,6 +273,7 @@ Mithilfe von eigenen Stylesheets in Form von .css oder .scss-Dateien lassen sich
     font-weight: bold; 
 }
 ```
+
 sorgt dafür, dass einzelne Wörter durch Verwendung von `[Beispielwort]{.neuer-begriff}` grün eingefärbt werden und fett gedruckt sind. Dabei werden die Eigenschaften der geschweiften Klammer auf alle Inhalte der eckigen Klammer angewendet. Änderungen in der .css-Datei werden dann global auf alle Elemente angewendet, sodass diese nicht einzeln geändert werden müssen. Die Verwendung einer .css-Datei kann im YAML-Header geregelt werden.
 
 ```
@@ -558,7 +562,7 @@ Toast Dining Eating von OpenClipart-Vectors ist lizensiert unter [Pixabay Conten
 ### BCD Nutzung von Vektorgrafiken
 Die Bausteine sind für den Export in HTML und PDF konzipiert. Der Export von Grafiken nach PDF erfolgt über LaTeX und eine PDF-Renderengine. Somit werden nur Formate unterstützt, die in LaTex und in PDF unterstützt werden. Dies betrifft insbesondere
 
-  * Vektorgrafiken: Um Vektorgrafiken im Format SVG zu verarbeiten, wird die Bibliothek `Librsvg` benötigt. Siehe: [Quarto: PDF Format Improvements](https://quarto.org/docs/prerelease/1.3/pdf.html). Werden svg Graphiken mit Dateiendung (als tite.svg) eingebunden wandelt Quarto dann automatisch die BIlder in das PDF Format um.
+  * Vektorgrafiken: Um Vektorgrafiken im Format SVG zu verarbeiten, wird die Bibliothek `Librsvg` benötigt. Siehe: [Quarto: PDF Format Improvements](https://quarto.org/docs/prerelease/1.3/pdf.html). Werden SVG-Grafiken mit Dateiendung (titel.svg) eingebunden, wandelt Quarto die Bilder automatisch in das PDF-Format um.
 
   * GIF: Das PDF-Format unterstützt animierte Bilddateien nicht bzw. nur in bestimmten Kombinationen aus Renderengine und PDF Reader. Quartos Standardengine TinyteX unterstützt animierte Bilddateien nicht.
 
@@ -686,7 +690,7 @@ format:
 ```
 
 ### Mehrsprachige Codebeispiele
-Für die Präsentation von Programmcode in mehreren Sprachen können [Tabset Panel](https://quarto.org/docs/interactive/layout.html#tabset-panel) genutzt werden. Diese werden mit einer Div `{.panel-tabset}` gesetzt, innerhalb derer neue Tabs durch eine Überschrift hinzugefügt werden `## Python`. 
+Für die Präsentation von Programmcode in mehreren Sprachen und/oder des erzeugten Outputs können [Tabset Panel](https://quarto.org/docs/interactive/layout.html#tabset-panel) genutzt werden. Diese werden mit einer Div `{.panel-tabset}` gesetzt, innerhalb derer neue Tabs durch eine Überschrift hinzugefügt werden `## Python`. 
 
 ::: {.panel-tabset}
 
@@ -695,26 +699,51 @@ Für die Präsentation von Programmcode in mehreren Sprachen können [Tabset Pan
 #| output: false
 #| results: hold # process code first, then print output
 
-import os
-print(os.getcwd())
+print("Hello World from Python!")
 ```
 
 ## R
 ```{r}
-#| output: FALSE
+#| output: false
 #| results: hold # process code first, then print output
 
-print(getwd())
+print("Hello World from R!")
+```
+
+## Output
+
+```{python}
+#| echo: false
+#| results: hold # process code first, then print output
+
+print("Hello World from Python!")
+```
+
+```{r}
+#| echo: false
+#| results: hold # process code first, then print output
+
+print("Hello World from R!")
 ```
 
 :::
 
 # Aufbau der Bausteine
+Die Bausteine sind modular aufgebaut und bestehen aus drei Typen: Werkzeugbausteinen, Methodenbausteinen und Anwendungsbausteinen. 
+
+  * Werkzeugbausteine vermitteln den Umgang mit den Programmierumgebungen Python und R, die Entwicklung von Pseudocode und die rechtlichen Grundlagen des Datenmanagements.
+
+  * Methodenbausteine vermitteln allgemeine methodische Grundlagen für die Datenanalyse wie die Analyse von Geodaten und Zeitreihen, Statistik, numerische Verfahren oder Datenfitting.
+
+  * Anwendungsbausteine vermitteln fachspezifische Inhalte wie die Auswertung von Sensordaten, Stadt- und Verkehrsplanung, Branddatenanalyse.
+
+Neben den fachlichen Inhalten umfassen Methoden- und Anwendungsbausteine Codebeispiele für Python bzw. für R, die Studierenden die Bearbeitung von Übungsaufgaben und Projekten in der jeweiligen Programmierumgebung erlauben.
+
 Die Bausteine folgen einem einheitlichen Aufbau:
 
 * Voraussetzungen
 
-  * Inhaltliche Voraussetzungen
+  * Inhaltliche Voraussetzungen (eingebundene seperate Markdown-Datei.)
 
   * vorher zu bearbeitende Bausteine
 
@@ -722,7 +751,7 @@ Die Bausteine folgen einem einheitlichen Aufbau:
   
   * geschätzte Bearbeitungszeit
 
-* Lernziele (Wissen, Kompetenzen, Leitfragen)
+* Lernziele: Wissen, Kompetenzen, Leitfragen(eingebundene seperate Markdown-Datei.)
 
 * Inhalt (gerne abwechslungsreich gestalten)
 
