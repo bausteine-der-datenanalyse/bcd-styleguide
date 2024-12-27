@@ -13,13 +13,22 @@ author:
 date: today # "2024-03-05" Jahr-Monat-Tag / year-month-day
 
 # Dokumenteneinstellungen / document options
-engine: knitr # für mit CSS zentrierten Text und eine einheitliche Codeausführung von Python und R im Styleguide - keine Relevanz für die Bausteine
+engine: knitr # für eine einheitliche Codeausführung von Python und R im Styleguide - keine Relevanz für die Bausteine
 
 ## Spracheinstellungen / language settings
 lang: de
-# crossref: 
-  # nte-title: Beispiel -- so nicht :(
-  # nte-prefix: Beispiel -- so nicht :(
+language:
+  de:
+    crossref-imp-title: "Definition"
+    crossref-imp-prefix: "Definition"
+    crossref-lst-title: "Code-Block"
+    crossref-lst-prefix: "Code-Block"
+    crossref-nte-title: "Beispiel"
+    crossref-nte-prefix: "Beispiel"
+    crossref-tip-title: "Tipp"
+    crossref-tip-prefix: "Tipp"
+    crossref-wrn-title: "Hinweis"
+    crossref-wrn-prefix: "Hinweis"
 
 ## Formatoption / formating options
 format:
@@ -50,14 +59,6 @@ fig-width: 6
 fig-asp: 0.618
 
 ---
-<!-- Blocksatz / justify text -->
-```{css} 
-#| echo: false
-p {
-  text-align: justify /* alternativ: start, end, center */
-  
-}
-```
 
 &nbsp;
 
@@ -70,7 +71,7 @@ p {
 *Lizenzangabe mit maschinenlesbaren Icon nach TULLU(BA)-Regel + Jahr: Titel, Urhebende, Lizenz, Link zur Lizenz. Ursprungsort. (Bearbeitung). (Ausnahmen). Jahr*
 
 :::: {layout="[20, 80]"}
-![](grafiken/CC-BY) <!-- Grafik ohne Titel und Dateiendung einbinden -->  
+![](grafiken/CC-BY){fig-alt="Symbol des Lizenzhinweises Creative Commons BY"} <!-- Grafik ohne Titel und Dateiendung einbinden -->  
 
 Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen von Lukas Arnold, Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und Sebastian Seipel ist lizensiert unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). Das Werk ist abrufbar auf [GitHub](https://github.com/bausteine-der-datenanalyse/bcd-styleguide). Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024
 
@@ -97,14 +98,14 @@ BibTeX-Vorlage
 # Einleitung
 Die Bausteine Computergestützter Datenanalyse wurden mit [Quarto](https://quarto.org/) erstellt. Quarto ist ein quelloffenes Publikationssystem, das die Programmiersprachen Python, R, Julia und Observable sowie verschiedene Publikationsformate wie HTML, PDF, MS Word oder ePub unterstützt. Dieses Dokument ist ein Leitfaden und Gestaltungsrichtlinie zur Bearbeitung und Neuerstellung von Bausteinen.
 
-Nach einer kurzen Einführung zur Installation (@sec-Installation) und allgemeinen Nutzung von Quarto (@sec-Quarto-Markdown-Dateien), wird die Verwendung von Elementen wie Grafiken und Code-Blöcken in @sec-Elemente erläutert. Stilistische Hinweise sind dabei *kursiv* gesetzt.
+Nach einer kurzen Einführung zur Installation (@sec-Installation) und allgemeinen Nutzung von Quarto (@sec-Quarto-Markdown-Dateien) wird die Verwendung von Elementen wie Grafiken und Code-Blöcken in @sec-Elemente erläutert. Stilistische Hinweise sind dabei *kursiv* gesetzt.
 
 # Installation {#sec-Installation}
 Um Bausteine zu bearbeiten oder eigene Bausteine im Stil von BCD zu erstellen, benötigen Sie:
 
-* eine lokale Quartodatei,
+* eine lokale Installation von Quarto,
 * eine Entwicklungsumgebung (VS Code, Jupyter, RStudio, Neovim, Text Editor) mit der jeweiligen Quarto-Erweiterung,
-* eine Installation der Programmiersprachen Python und R (bzw. der von Ihnen präferierten Programmiersprache) sowie
+* eine Installation der Programmiersprachen Python und / oder R sowie
 * die für die jeweilige Programmiersprache verwendeten Pakete. 
 
 Siehe: [Quarto Get Started](https://quarto.org/docs/get-started/)
@@ -121,8 +122,14 @@ YAML ("YAML Ain’t Markup Language") ist eine Sprache zum Schreiben von Konfigu
 # Metadaten / meta data
 title: "Bausteine Computergestützter Datenanalyse"
 subtitle: "Leitfaden zur Erstellung von Bausteinen"
-author: "Maik Poetzsch"
-date: "2024-03-05" # Jahr-Monat-Tag / year-month-day
+author:
+  - Lukas Arnold
+  - Simone Arnold
+  - Florian Bagemihl
+  - Matthias Baitsch
+  - Marc Fehr
+  - Maik Poetzsch
+  - Sebastian Seipel
 ---
 ```
 
@@ -140,7 +147,7 @@ format:
 ```
 
 #### Spracheinstellungen
-`lang: de` setzt die Dokumentensprache auf Deutsch. Die Standardeinstellung ist Englisch: `lang: en`. Weitere Einstellungen können mit `language` auch für verschiedene Sprachen vorgenommen werden. Eine Liste der Optionen findet sich [auf GitHub](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml).
+`lang: de` setzt die Dokumentensprache auf Deutsch. Die Standardeinstellung ist Englisch: `lang: en`. Weitere Einstellungen können mit der Option `language` auch für mehrere Sprachen konfiguriert werden. Eine Liste der Optionen findet sich [auf GitHub](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml).
 
 ```
 language:
@@ -306,7 +313,7 @@ Eine kleine Auswahl an Beispielen für Stylesheets anderer Projekte mit untersch
 - [Introduction to Modern Statistics PDF/LaTeX Stylesheet](https://github.com/OpenIntroStat/ims/blob/main/latex/ims-style.tex)
 
 ### Callout Blocks
-Callout Blocks eignen sich inbesondere dazu, textuelle Inhalte hervorzuheben. Callout Blocks können umfangreich angepasst werden und Elemente wie Grafiken oder Code-Blöcke enthalten.  Die Typen werden mit der Spracheinstellung im YAML-Header `lang: de` lokalisiert.
+Callout Blocks eignen sich dazu, ausgewählte Inhalte hervorzuheben. Callout Blocks können umfangreich angepasst werden.
 
 ```
 :::{.callout-note}
@@ -358,6 +365,32 @@ Die erste Überschrift im Markdownformat wird als Titel benutzt, wenn keiner spe
 :::::
 
 Siehe dazu: [Quarto Callout Blocks](https://quarto.org/docs/authoring/callouts.html)
+
+Callout Blocks werden mit der Spracheinstellung im YAML-Header lokalisiert.
+
+``` {raw}
+## Spracheinstellungen / language settings
+lang: de
+language:
+  de:
+    crossref-imp-title: "Definition"
+    crossref-imp-prefix: "Definition"
+```
+
+Damit die Lokalisierung wirksam wird, muss für den  Callout Block eine ID vergeben werden. Die ID muss an erster Stelle stehen und besteht aus einer `#` und einem reservierten Kürzel (siehe @sec-Querverweise).
+
+:::: {layout-ncol=2}
+::: {.callout-important}
+Callout Block vom Typ important ohne ID.  
+`{.callout-important}`
+:::
+
+::: {#imp-ID .callout-important}
+Callout Block vom Typ important mit ID.  
+`{#imp-ID .callout-important}`
+:::
+::::
+
 
 #### Definieren von eigenen Callout-Umgebungen {#sec-callout-custom}
 
@@ -439,49 +472,52 @@ div.callout-definition.callout-style-default > .callout-header {
 ```
 
 
-#### Verwendungsvorschlag für die Bausteine
+#### Verwendungsvorschlag Callout Blocks in den Bausteinen {#sec-Verwendungsvorschlag}
+
+Callout Blocks sollten immer eine ID erhalten (siehe @sec-Querverweise).
+
 :::{#nte-Beispiel .callout-note}
-# Beispiel Note
+# Beispiel note
 *`callout-note` für Beispiele*  
 Querverweis mit `#nte-ID` **Nicht von `lang: de`, keine crossref-Option betroffen**
 :::
 
-:::{.callout-important}
-# Definition Begriff XY
+:::{#imp-Beispiel .callout-important}
+# Beispiel important
 *`callout-important` für Definitionen - der definierte Begriff wird als Überschrift verwendet.* **Ggf. grau**  
 Querverweis mit `#imp-ID`
 :::
 
-:::{.callout-tip collapse="true"}
+:::{#tip-Beispiel .callout-tip collapse="true"}
+## Beispiel tip
 *`callout-tip` aufklappbar für Lösungshilfen und Lösungen*  
 Querverweis mit `#tip-ID`
 :::
 
-:::{.callout-warning appearance="simple"}
-# Hinweis
+:::{#wrn-Beispiel .callout-warning appearance="simple"}
+# Beispiel warning
 *`callout-warning appearance="simple"` für Hinweise*  
 Querverweis mit `#wrn-ID`
 :::
 
-**Achtung** Der Querverweis auf einen Callout Block bleibt Englisch: @nte-Beispiel. Dass kann man aber notfalls manuell lösen: [Querverweis auf Hinweis @nte-Beispiel]:
+### Nummerierte Beschriftungen und Querverweise {#sec-Querverweise}
+Um nummerierte Beschriftungen und Querverweise zu setzen, muss das Zielelement mit einer ID versehen werden. Elementen (z. B. Code-Blöcke, Grafiken, Überschriften) wird eine ID in geschweiften Klammern übergeben, die ID muss innerhalb der geschweiften Klammer an erster Stelle stehen und beginnt mit einer `#`, gefolgt von einem typabhängigen, reservierten Präfix. Anschließend folgt eine beschreibende Zeichenkette, um  das Zielelementen von anderen Elementen des gleichen Typs zu unterscheiden. Auf diese Weise werden auch Überschriften querverwiesen.
 
-### Querverweise {#Querverweise}
-Um Querverweise zu setzen, muss das Zielelement mit einer ID versehen werden. Elementen (z. B. Code-Blöcke, Grafiken, Überschriften) wird eine ID in geschweiften Klammern übergeben, die ID muss innerhalb der Klammer an erster Stelle stehen. Ein Beispiel, in dem für die eingebundene Grafik eine ID vergeben sowie die Größe der Grafik mit der Option `width` eingestellt wird:
+:::{#wrn-prefixlist .callout-warning appearance="simple" title="Hinweis reservierte Präfixe"}
+In Quarto sind verschiedene Präfixe für die Erstellung von Querverweisen reserviert: fig, tbl, lst, tip, nte, wrn, imp, cau, thm, lem, cor, prp, cnj, def, exm, exr, sol, rem, eq, sec.
+:::
+
+Der Callout Block vom Typ Hinweis im Abschnitt @sec-Verwendungsvorschlag hat die ID `#nte-Beispiel`. Der Querverweis auf diesen Callout Block lautet `@nte-Beispiel`: @nte-Beispiel.
+
+(Siehe dazu: [Quarto Cross References](https://quarto.org/docs/authoring/cross-references.html))
+
+Grafiken erhalten das Präfix `fig`. In diesem Beispiel wird eine ID vergeben sowie die Größe der Grafik mit der Option `width` eingestellt:
 
 `![](grafiken/working_code_CC0){#fig-programmieren width="33%"}`
 
 ![](grafiken/working_code_CC0){#fig-programmieren width="33%"}
 
-Mit der ID kann ein Querverweis auf die Abbildung gesetzt werden: `@fig-programmieren` erzeugt den Querverweis @fig-programmieren. Der Verweistext kann angepasst werden: `[Grafik @fig-programmieren]` erzeugt den Querverweis [Grafik @fig-programmieren].  
-
-Sowohl die ID der Grafik als auch der Querverweis beinhalten ein Präfix, das den Typ des Elements ausweist. 
-
-:::{.callout-warning appearance="simple" title="Hinweis Reservierte Präfixe"}
-In Quarto sind verschiedene Präfixe für die Erstellung von Querverweisen reserviert: fig, tbl, lst, tip, nte, wrn, imp, cau, thm, lem, cor, prp, cnj, def, exm, exr, sol, rem, eq, sec.
-:::
-
-&nbsp;
-Siehe dazu: [Quarto Cross References](https://quarto.org/docs/authoring/cross-references.html)
+Mit der ID kann ein Querverweis auf die Abbildung gesetzt werden: `@fig-programmieren` erzeugt den Querverweis @fig-programmieren. 
 
 ## Grafiken
 Grafiken können lokal oder aus dem Internet eingebunden werden. Der lokale Dateipfad wird ausgehend vom aktuellen Arbeitsverzeichnis angegeben. *Grafiken werden im Unterordner "grafiken" abgelegt*. 
@@ -622,7 +658,7 @@ Open Educational Resources concept: What is an OER? von UNESCO ist lizensiert un
 ### H5P-Elemente {-}
 H5P-Elemente können exportiert als all-in-one HTML file eingebunden werden. Die Syntax lautet:
 
-```{.raw}
+```{raw}
 {=html}
 {{< include Beispiel.html >}}
 ```
@@ -741,9 +777,9 @@ Neben den fachlichen Inhalten umfassen Methoden- und Anwendungsbausteine Codebei
 
 Die Bausteine folgen einem einheitlichen Aufbau:
 
-* Voraussetzungen
+* Voraussetzungen (eingebundene seperate Markdown-Datei)
 
-  * Inhaltliche Voraussetzungen (eingebundene seperate Markdown-Datei.)
+  * Inhaltliche Voraussetzungen 
 
   * vorher zu bearbeitende Bausteine
 
