@@ -149,6 +149,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#programmcode-1" id="toc-programmcode-1" class="nav-link" data-scroll-target="#programmcode-1"><span class="header-section-number">4.7</span> Programmcode</a>
   <ul class="collapse">
+  <li><a href="#code-kopieren" id="toc-code-kopieren" class="nav-link" data-scroll-target="#code-kopieren">Code kopieren</a></li>
   <li><a href="#optionen-für-programmierte-grafiken" id="toc-optionen-für-programmierte-grafiken" class="nav-link" data-scroll-target="#optionen-für-programmierte-grafiken">Optionen für programmierte Grafiken</a></li>
   </ul></li>
   </ul></li>
@@ -1189,6 +1190,15 @@ Ausgabe 2</code></pre>
 </div>
 </div>
 <p>Quarto bietet darüber hinaus weitere Konfigurationsmöglichkeiten für die Präsentation von Programmcode (<a href="https://quarto.org/docs/output-formats/html-code.html#overview">siehe Dokumentation</a>).</p>
+<section id="code-kopieren" class="level3">
+<h3 class="anchored" data-anchor-id="code-kopieren">Code kopieren</h3>
+<p><em>Im YAML-Header wird per Option die Kopierfläche für Programmcode aktiviert.</em> (Standard ist das Sichtbarwerden beim Herüberfahren mit der Maus, code-copy: hover.)</p>
+<div class="cell">
+<pre class="raw cell-code"><code>format:
+  html:
+    code-copy: true # hover is default</code></pre>
+</div>
+</section>
 <section id="optionen-für-programmierte-grafiken" class="level3">
 <h3 class="anchored" data-anchor-id="optionen-für-programmierte-grafiken">Optionen für programmierte Grafiken</h3>
 <p>Die in den Bausteinen verwendeten Optionen zur Gestaltung programmierter Grafiken sind im folgenden Block kurz erläutert.</p>

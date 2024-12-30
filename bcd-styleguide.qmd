@@ -878,6 +878,15 @@ print("Ausgabe 2")
 
 Quarto bietet darüber hinaus weitere Konfigurationsmöglichkeiten für die Präsentation von Programmcode ([siehe Dokumentation](https://quarto.org/docs/output-formats/html-code.html#overview)).
 
+### Code kopieren
+
+*Im YAML-Header wird per Option die Kopierfläche für Programmcode aktiviert.* (Standard ist das Sichtbarwerden beim Herüberfahren mit der Maus, code-copy: hover.)
+
+``` {raw}
+format:
+  html:
+    code-copy: true # hover is default
+```
 
 ### Optionen für programmierte Grafiken
 Die in den Bausteinen verwendeten Optionen zur Gestaltung programmierter Grafiken sind im folgenden Block kurz erläutert.
