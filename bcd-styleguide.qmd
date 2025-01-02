@@ -33,7 +33,7 @@ language:
 ## Formatoption / formating options
 format:
   html:
-    ## Logo
+    ## Logo im Browsertab
     ### Logo in Quarto Books
     favicon: "skript/00-bilder/favicon_bcd_new.svg"
     
@@ -52,7 +52,10 @@ format:
 
 ## Inhaltsverzeichnis / table of contents
 toc: true
-toc-title: Leitfaden zur Erstellung von Bausteinen
+toc-title:  |
+  Leitfaden zur Erstellung von Bausteinen  
+
+  ![](skript/00-bilder/logo_bcd_new.svg)
 number-sections: true
 number-depth: 2
 
@@ -70,10 +73,6 @@ fig-width: 6
 fig-asp: 0.618
 
 ---
-
-&nbsp;
-
-&nbsp;
 
 ::: {.border #Lizenz}
 
