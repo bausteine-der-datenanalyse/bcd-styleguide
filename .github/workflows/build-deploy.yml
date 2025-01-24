@@ -37,6 +37,7 @@ jobs:
       - name: Install R packages  
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          install-quarto: false
           packages:
             any::rmarkdown
             any::ggplot2
@@ -46,6 +47,7 @@ jobs:
             any::tidyverse
             any::kableExtra
             any::janitor
+            
       
       # Setup Quarto with fixed version
       - name: Setup Quarto
