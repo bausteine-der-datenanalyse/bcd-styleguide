@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.556">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,6 +94,8 @@ div.csl-indent {
 <script src="bcd-styleguide_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="bcd-styleguide_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="bcd-styleguide_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link rel="shortcut icon" href="skript/00-bilder/favicon_bcd_new.svg">
+<link rel="icon" type="image/x-icon" href="logo.ico">
 
 
 </head>
@@ -103,7 +105,8 @@ div.csl-indent {
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+    <h2 id="toc-title"><p>Leitfaden zur Erstellung von Bausteinen</p>
+<p><img src="skript/00-bilder/logo_with_text_new.svg" class="img-fluid"></p></h2>
    
   <ul>
   <li><a href="#einleitung" id="toc-einleitung" class="nav-link active" data-scroll-target="#einleitung"><span class="header-section-number">1</span> Einleitung</a></li>
@@ -128,32 +131,34 @@ div.csl-indent {
   <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text"><span class="header-section-number">4.1</span> Text</a>
   <ul class="collapse">
   <li><a href="#stylesheets" id="toc-stylesheets" class="nav-link" data-scroll-target="#stylesheets">Stylesheets</a></li>
-  <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks">Callout Blocks</a></li>
-  <li><a href="#Querverweise" id="toc-Querverweise" class="nav-link" data-scroll-target="#Querverweise">Querverweise</a></li>
   </ul></li>
-  <li><a href="#grafiken" id="toc-grafiken" class="nav-link" data-scroll-target="#grafiken"><span class="header-section-number">4.2</span> Grafiken</a>
+  <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks"><span class="header-section-number">4.2</span> Callout Blocks</a>
+  <ul class="collapse">
+  <li><a href="#sec-Verwendungsvorschlag" id="toc-sec-Verwendungsvorschlag" class="nav-link" data-scroll-target="#sec-Verwendungsvorschlag">Verwendungsvorschlag Callout Blocks in den Bausteinen</a></li>
+  </ul></li>
+  <li><a href="#tabset-panel" id="toc-tabset-panel" class="nav-link" data-scroll-target="#tabset-panel"><span class="header-section-number">4.3</span> Tabset Panel</a></li>
+  <li><a href="#sec-Querverweise" id="toc-sec-Querverweise" class="nav-link" data-scroll-target="#sec-Querverweise"><span class="header-section-number">4.4</span> Nummerierte Beschriftungen und Querverweise</a></li>
+  <li><a href="#grafiken" id="toc-grafiken" class="nav-link" data-scroll-target="#grafiken"><span class="header-section-number">4.5</span> Grafiken</a>
   <ul class="collapse">
   <li><a href="#grafikoptionen" id="toc-grafikoptionen" class="nav-link" data-scroll-target="#grafikoptionen">Grafikoptionen</a></li>
-  <li><a href="#dekorative-grafiken" id="toc-dekorative-grafiken" class="nav-link" data-scroll-target="#dekorative-grafiken">Dekorative Grafiken</a></li>
-  <li><a href="#bcd-nutzung-von-vektorgrafiken" id="toc-bcd-nutzung-von-vektorgrafiken" class="nav-link" data-scroll-target="#bcd-nutzung-von-vektorgrafiken">BCD Nutzung von Vektorgrafiken</a></li>
+  <li><a href="#nutzung-von-vektorgrafiken" id="toc-nutzung-von-vektorgrafiken" class="nav-link" data-scroll-target="#nutzung-von-vektorgrafiken">Nutzung von Vektorgrafiken</a></li>
   <li><a href="#flussdiagramme" id="toc-flussdiagramme" class="nav-link" data-scroll-target="#flussdiagramme">Flussdiagramme</a></li>
   </ul></li>
-  <li><a href="#videos-und-h5p-elemente" id="toc-videos-und-h5p-elemente" class="nav-link" data-scroll-target="#videos-und-h5p-elemente"><span class="header-section-number">4.3</span> Videos und H5P-Elemente</a>
+  <li><a href="#videos-und-h5p-elemente" id="toc-videos-und-h5p-elemente" class="nav-link" data-scroll-target="#videos-und-h5p-elemente"><span class="header-section-number">4.6</span> Videos und H5P-Elemente</a>
   <ul class="collapse">
   <li><a href="#h5p-elemente" id="toc-h5p-elemente" class="nav-link" data-scroll-target="#h5p-elemente">H5P-Elemente</a></li>
   </ul></li>
-  <li><a href="#programmcode-1" id="toc-programmcode-1" class="nav-link" data-scroll-target="#programmcode-1"><span class="header-section-number">4.4</span> Programmcode</a>
+  <li><a href="#programmcode-1" id="toc-programmcode-1" class="nav-link" data-scroll-target="#programmcode-1"><span class="header-section-number">4.7</span> Programmcode</a>
   <ul class="collapse">
-  <li><a href="#optionen-codeblöcke-bitte-ergänzen" id="toc-optionen-codeblöcke-bitte-ergänzen" class="nav-link" data-scroll-target="#optionen-codeblöcke-bitte-ergänzen">Optionen Codeblöcke (bitte ergänzen)</a></li>
-  <li><a href="#yaml-header-bitte-ergänzen-ggf.-oben-einfügen" id="toc-yaml-header-bitte-ergänzen-ggf.-oben-einfügen" class="nav-link" data-scroll-target="#yaml-header-bitte-ergänzen-ggf.-oben-einfügen">YAML-Header (bitte ergänzen, ggf. oben einfügen)</a></li>
-  <li><a href="#optionen-für-programmierte-grafiken-bitte-ergänzen" id="toc-optionen-für-programmierte-grafiken-bitte-ergänzen" class="nav-link" data-scroll-target="#optionen-für-programmierte-grafiken-bitte-ergänzen">Optionen für programmierte Grafiken (bitte ergänzen)</a></li>
-  <li><a href="#mehrsprachige-codebeispiele" id="toc-mehrsprachige-codebeispiele" class="nav-link" data-scroll-target="#mehrsprachige-codebeispiele">Mehrsprachige Codebeispiele</a></li>
+  <li><a href="#code-kopieren" id="toc-code-kopieren" class="nav-link" data-scroll-target="#code-kopieren">Code kopieren</a></li>
+  <li><a href="#optionen-für-programmierte-grafiken" id="toc-optionen-für-programmierte-grafiken" class="nav-link" data-scroll-target="#optionen-für-programmierte-grafiken">Optionen für programmierte Grafiken</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#aufbau-der-bausteine" id="toc-aufbau-der-bausteine" class="nav-link" data-scroll-target="#aufbau-der-bausteine"><span class="header-section-number">5</span> Aufbau der Bausteine</a>
   <ul class="collapse">
-  <li><a href="#sprache" id="toc-sprache" class="nav-link" data-scroll-target="#sprache"><span class="header-section-number">5.1</span> Sprache</a></li>
-  <li><a href="#barrierefreiheit" id="toc-barrierefreiheit" class="nav-link" data-scroll-target="#barrierefreiheit"><span class="header-section-number">5.2</span> Barrierefreiheit</a></li>
+  <li><a href="#ordnerstruktur" id="toc-ordnerstruktur" class="nav-link" data-scroll-target="#ordnerstruktur"><span class="header-section-number">5.1</span> Ordnerstruktur</a></li>
+  <li><a href="#sprache" id="toc-sprache" class="nav-link" data-scroll-target="#sprache"><span class="header-section-number">5.2</span> Sprache</a></li>
+  <li><a href="#barrierefreiheit" id="toc-barrierefreiheit" class="nav-link" data-scroll-target="#barrierefreiheit"><span class="header-section-number">5.3</span> Barrierefreiheit</a></li>
   </ul></li>
   <li><a href="#quellenverzeichnis" id="toc-quellenverzeichnis" class="nav-link" data-scroll-target="#quellenverzeichnis">Quellenverzeichnis</a></li>
   </ul>
@@ -187,7 +192,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">17. Mai 2024</p>
+      <p class="date">24. Januar 2025</p>
     </div>
   </div>
   
@@ -199,17 +204,6 @@ div.csl-indent {
 </header>
 
 
-<!-- Blocksatz / justify text -->
-<div class="cell">
-<style type="text/css">
-p {
-  text-align: justify /* alternativ: start, end, center */
-  
-}
-</style>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <div id="Lizenz" class="border">
 <!-- Die Lizenz wird manuell in einer Div erstellt, um Vorgaben für OER hinsichtlich Position und Format zu entsprechen. (licence key im YAML-Header funktioniert in PDF nicht.) -->
 <p><em>Lizenzangabe mit maschinenlesbaren Icon nach TULLU(BA)-Regel + Jahr: Titel, Urhebende, Lizenz, Link zur Lizenz. Ursprungsort. (Bearbeitung). (Ausnahmen). Jahr</em></p>
@@ -219,10 +213,10 @@ p {
 <div class="quarto-layout-panel" data-layout="[20, 80]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p><img src="grafiken/CC-BY.svg" class="img-fluid"> <!-- Grafik ohne Titel und Dateiendung einbinden --></p>
+<p><img src="skript/00-bilder/CC-BY.svg" class="img-fluid" alt="Symbol des Lizenzhinweises Creative Commons BY"> <!-- Grafik ohne Titel und Dateiendung einbinden --></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
-<p>Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen von Lukas Arnold, Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und Sebastian Seipel ist lizensiert unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a>. Das Werk ist abrufbar auf <a href="https://github.com/bausteine-der-datenanalyse/bcd-styleguide">GitHub</a>. Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024</p>
+<p>Bausteine Computergestützter Datenanalyse. Leitfaden zur Erstellung von Bausteinen von Lukas Arnold, Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und Sebastian Seipel ist lizensiert unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a>. Das Werk ist abrufbar auf <a href="https://github.com/bausteine-der-datenanalyse/bcd-styleguide">GitHub</a>. Ausgenommen von der Lizenz sind alle Logos Dritter und anders gekennzeichneten Inhalte. 2024</p>
 </div>
 </div>
 </div>
@@ -239,15 +233,15 @@ p {
 <section id="einleitung" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Einleitung</h1>
 <p>Die Bausteine Computergestützter Datenanalyse wurden mit <a href="https://quarto.org/">Quarto</a> erstellt. Quarto ist ein quelloffenes Publikationssystem, das die Programmiersprachen Python, R, Julia und Observable sowie verschiedene Publikationsformate wie HTML, PDF, MS Word oder ePub unterstützt. Dieses Dokument ist ein Leitfaden und Gestaltungsrichtlinie zur Bearbeitung und Neuerstellung von Bausteinen.</p>
-<p>Nach einer kurzen Einführung zur Installation (<a href="#sec-Installation" class="quarto-xref">Kapitel&nbsp;2</a>) und allgemeinen Nutzung von Quarto (<a href="#sec-Quarto-Markdown-Dateien" class="quarto-xref">Kapitel&nbsp;3</a>), wird die Verwendung von Elementen wie Grafiken und Code-Blöcken in <a href="#sec-Elemente" class="quarto-xref">Kapitel&nbsp;4</a> erläutert. Stilistische Hinweise sind dabei <em>kursiv</em> gesetzt.</p>
+<p>Nach einer kurzen Einführung zur Installation (<a href="#sec-Installation" class="quarto-xref">Kapitel&nbsp;2</a>) und allgemeinen Nutzung von Quarto (<a href="#sec-Quarto-Markdown-Dateien" class="quarto-xref">Kapitel&nbsp;3</a>) wird die Verwendung von Elementen wie Grafiken und Code-Blöcken in <a href="#sec-Elemente" class="quarto-xref">Kapitel&nbsp;4</a> erläutert. Stilistische Hinweise sind dabei <em>kursiv</em> gesetzt.</p>
 </section>
 <section id="sec-Installation" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Installation</h1>
 <p>Um Bausteine zu bearbeiten oder eigene Bausteine im Stil von BCD zu erstellen, benötigen Sie:</p>
 <ul>
-<li>eine lokale Quartodatei,</li>
+<li>eine lokale Installation von Quarto,</li>
 <li>eine Entwicklungsumgebung (VS Code, Jupyter, RStudio, Neovim, Text Editor) mit der jeweiligen Quarto-Erweiterung,</li>
-<li>eine Installation der Programmiersprachen Python und R (bzw. der von Ihnen präferierten Programmiersprache) sowie</li>
+<li>eine Installation der Programmiersprachen Python und / oder R sowie</li>
 <li>die für die jeweilige Programmiersprache verwendeten Pakete.</li>
 </ul>
 <p>Siehe: <a href="https://quarto.org/docs/get-started/">Quarto Get Started</a></p>
@@ -264,13 +258,19 @@ p {
 # Metadaten / meta data
 title: "Bausteine Computergestützter Datenanalyse"
 subtitle: "Leitfaden zur Erstellung von Bausteinen"
-author: "Maik Poetzsch"
-date: "2024-03-05" # Jahr-Monat-Tag / year-month-day
+author:
+  - Lukas Arnold
+  - Simone Arnold
+  - Florian Bagemihl
+  - Matthias Baitsch
+  - Marc Fehr
+  - Maik Poetzsch
+  - Sebastian Seipel
 ---</code></pre>
 </section>
 <section id="konfiguration" class="level3">
 <h3 class="anchored" data-anchor-id="konfiguration">Konfiguration</h3>
-<p>Für die Dokumentenerstellung können an unterschiedliche Formate angepasste Einstellungen vorgenommen werden. Auf die korrekte Einrückung ist zu achten.</p>
+<p>Für die Dokumentenerstellung können an unterschiedliche Formate angepasste Einstellungen vorgenommen werden. Auf die korrekte Einrückung zusammenhängender Blöcke ist zu achten.</p>
 <pre><code>format:
   html: # 2 Leerzeichen oder 1 Tab
     option: parameter # 4 Leerzeichen oder 2 Tabs
@@ -280,23 +280,22 @@ date: "2024-03-05" # Jahr-Monat-Tag / year-month-day
     option: parameter</code></pre>
 <section id="spracheinstellungen" class="level4">
 <h4 class="anchored" data-anchor-id="spracheinstellungen">Spracheinstellungen</h4>
-<p><code>lang: de</code> setzt die Dokumentensprache auf Deutsch. Die Standardeinstellung ist Englisch: <code>lang: en</code>. Weitere Einstellungen können mit <code>language</code> auch für verschiedene Sprachen vorgenommen werden. Eine Liste der Optionen findet sich <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml">auf GitHub</a>.</p>
+<p><code>lang: de</code> setzt die Dokumentensprache auf Deutsch. Die Standardeinstellung ist Englisch: <code>lang: en</code>. Weitere Einstellungen können mit der Option <code>language</code> auch für mehrere Sprachen konfiguriert werden. Eine Liste der Optionen findet sich <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml">auf GitHub</a>.</p>
 <pre><code>language:
   de:
     toc-title: Inhalt # Titel des Inhaltsverzeichnisses
   en:
     toc-title: Contents # title for table of contents</code></pre>
-<div class="callout callout-style-simple callout-warning callout-titled">
+<div id="wrn-language" class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hinweis
+Hinweis&nbsp;1: Spracheinstellungen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em><code>lang</code> ersetzt die einzelne Konfiguration über crossref.</em></p>
 <pre><code>crossref: 
   fig-title: Abbildung
   fig-prefix: Abbildung
@@ -356,15 +355,18 @@ urldate = {2024-02-27}
 <dd>
 <code>[@Hemingway1952]</code> <span class="citation" data-cites="Hemingway1952">(<a href="#ref-Hemingway1952" role="doc-biblioref">Hemingway 1952</a>)</span>
 </dd>
+<dd>
+<code>[@Hemingway1952, 53]</code> <span class="citation" data-cites="Hemingway1952">(<a href="#ref-Hemingway1952" role="doc-biblioref">Hemingway 1952, 53</a>)</span>
+</dd>
 </dl>
 <p>&nbsp;</p>
-<div class="callout callout-style-simple callout-warning callout-titled">
+<div id="wrn-citation" class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hinweis
+Hinweis&nbsp;2: Quellennachweise
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -385,7 +387,8 @@ Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 <li><p>Codezellen werden durch führende Kommentarzeilen parametrisiert. (Anders als in R Markdown sollen Zelloptionen nicht in der geschweiften Klammer übergeben werden.)</p>
 <ul>
 <li><p>In Python, R und Julia mit <code>#| option: parameter</code></p></li>
-<li><p>In Observable JavaScript mit <code>//| option: parameter</code></p></li>
+<li><p>In Graphviz und Observable JavaScript mit <code>//| option: parameter</code></p></li>
+<li><p>In Mermaid mit <code>%%| option: parameter</code></p></li>
 </ul></li>
 <li><p>Objekte wie Überschriften, Callout Blocks, Divs, Grafiken und Tabellen werden mit geschweiften Klammern gesteuert <code>{option="parameter"}</code></p></li>
 </ul>
@@ -393,10 +396,34 @@ Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 </section>
 <section id="divs" class="level3">
 <h3 class="anchored" data-anchor-id="divs">Divs</h3>
-<p>Divs bieten vielfältige Möglichkeiten, Abschnitte zu formatieren. Divs werden mit mindestens drei Doppelpunkten <code>:::</code> eingeleitet und beendet (vier und mehr Doppelpunkte helfen bei verschachtelten Divs, den Üblick zu behalten). Optionen werden in geschweiften Klammern übergeben. Siehe: <a href="https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans">Quarto Divs</a></p>
+<p>Divs bieten vielfältige Möglichkeiten, Abschnitte zu formatieren. Divs werden mit mindestens drei Doppelpunkten <code>:::</code> eingeleitet und beendet (vier und mehr Doppelpunkte helfen bei verschachtelten Divs, den Üblick zu behalten). Optionen werden in geschweiften Klammern übergeben. Die folgende Div …</p>
+<div class="cell">
+<pre class="raw cell-code"><code>::: {layout-ncol=2}
+
+Text in Spalte 1
+
+Text in Spalte 2
+:::
+</code></pre>
+</div>
+<p>… erzeugt ein zweispaltiges Layout:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Text in Spalte 1</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Text in Spalte 2</p>
+</div>
+</div>
+</div>
+<p>Siehe: <a href="https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans">Quarto Divs</a></p>
 <p>Besondere Bedeutung haben Divs für:</p>
 <ul>
-<li><p>das Layout in mehreren Zeilen oder Spalten und die Abstandsformatierung (siehe Lizenzhinweis am Anfang des Dokuments). <a href="https://quarto.org/docs/authoring/figures.html#figure-panels">Quarto Figure Panels</a></p></li>
+<li><p>das Layout in mehreren Zeilen oder Spalten und die Abstandsformatierung (Ein Beispiel ist der Lizenzhinweis am Anfang des Dokuments). <a href="https://quarto.org/docs/authoring/figures.html#figure-panels">Quarto Figure Panels</a></p></li>
 <li><p>Layout von Code-Blöcken in einem <a href="https://quarto.org/docs/interactive/layout.html#tabset-panel">Tabset Panel</a></p></li>
 <li><p>Conditional Content zur formatabhängigen Einbindung von Inhalten. <a href="https://quarto.org/docs/authoring/conditional.html">Quarto Conditional Content</a></p></li>
 <li><p>Erweiterte Möglichkeiten für Querverweise. <a href="https://quarto.org/docs/authoring/cross-references-divs.html">Quarto Cross-Reference Div Syntax</a></p></li>
@@ -405,20 +432,47 @@ Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 </section>
 <section id="programmcode" class="level3">
 <h3 class="anchored" data-anchor-id="programmcode">Programmcode</h3>
-<p>Quarto Markdown kann Code von verschiedenen Programmiersprachen ausführen: Python, R, Julia und Observable JavaScript. Dazu unterstützt Quarto die Engines Knitr und Jupyter zur dynamischen Berichterstellung. <a href="https://quarto.org/docs/faq/#what-programming-languages-are-supported-in-quarto">Quelle: Quarto Frequently Asked Questions</a></p>
+<p>Quarto Markdown kann Code von verschiedenen Programmiersprachen ausführen: Python, R, Julia und Observable JavaScript. Dazu unterstützt Quarto die Engines Knitr und Jupyter zur dynamischen Berichterstellung. (<a href="https://quarto.org/docs/faq/#what-programming-languages-are-supported-in-quarto">Quarto Frequently Asked Questions</a>)</p>
 <p>Python-Code wird mit Jupyter verarbeitet. Dazu muss eine lokale Installation von Python vorhanden sein. Die Installationsdatei sollte von der <a href="https://www.python.org/downloads/">Python Homepage</a> bezogen werden.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="grafiken/Renderpfad_Jupyter.png" class="img-fluid figure-img"></p>
+<p><img src="skript/00-bilder/Renderpfad_Jupyter.png" class="img-fluid figure-img" alt="Darstellung des Renderpfads von Quarto Markdown zu Jupyter zu Markdown zu Pandoc zum gewünschten Format, z. B. PDF, Worddatei oder HTML."></p>
 <figcaption>Jupyter Engine, <a href="https://quarto.org/docs/get-started/hello/vscode.html#how-it-works">Quelle</a></figcaption>
 </figure>
 </div>
 <p>R-Code wird mit Knitr verarbeitet. Dazu muss eine lokale Installation von R vorhanden sein, in der die Pakete <code>knitr</code>, <code>rmarkdown</code> sowie für die Ausführung von Python-Code das Paket <code>reticulate</code> installiert sind.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="grafiken/Renderpfad_Knitr.png" class="img-fluid figure-img"></p>
+<p><img src="skript/00-bilder/Renderpfad_Knitr.png" class="img-fluid figure-img" alt="Darstellung des Renderpfads von Quarto Markdown zu Knitr zu Markdown zu Pandoc zum gewünschten Format, z. B. PDF, Worddatei oder HTML."></p>
 <figcaption>Knitr Engine, <a href="https://quarto.org/docs/get-started/hello/rstudio.html#how-it-works">Quelle</a></figcaption>
 </figure>
+</div>
+<p>Wird in einem Quarto-Dokument sowohl Python- als auch R-Code benutzt, wird die Knitr Engine zur Erstellung des Dokuments verwendet.</p>
+<p>Codeblöcke werden mit ``` eingeschlossen und die zu verwendende Progammiersprache in geschweiften Klammern übergeben.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Python-Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R-Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>``` {python}</p>
+<p>print(“Hello World from Python!”)</p>
+<p>```</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World from Python!</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>``` {r}</p>
+<p>print(“Hello World from R!”)</p>
+<p>```</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello World from R!"</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -432,10 +486,10 @@ Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 <h3 class="anchored" data-anchor-id="stylesheets">Stylesheets</h3>
 <p>Mithilfe von eigenen Stylesheets in Form von .css oder .scss-Dateien lassen sich eine Vielzahl an Layoutoptionen in der HTML-Ausgabe anpassen <span class="citation" data-cites="W3Schools-Stylesheets">(<a href="#ref-W3Schools-Stylesheets" role="doc-biblioref">W3Schools</a>)</span>. Eine simple Einstellung wie</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.neuer-begriff</span> { </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">green</span><span class="op">;</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span> </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.neuer-begriff</span> { </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">green</span><span class="op">;</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <style type="text/css">
 .neuer-begriff { 
     color: green; 
@@ -443,27 +497,28 @@ Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 }
 </style>
 </div>
-<p>sorgt dafür, dass einzelne Wörter durch Verwendung von <code>[Beispielwort]{.neuer-begriff}</code> grün eingefärbt werden und fett gedruckt sind. Dabei werden die Eigenschaften der geschweiften Klammer auf alle Inhalte der eckigen Klammer angewendet. Änderungen in der .css-Datei werden dann global auf alle Elemente angewendet, sodass diese nicht einzeln geändert werden müssen. Die Verwendung einer .css-Datei kann im YAML-Header geregelt werden.</p>
+<p>sorgt dafür, dass einzelne Wörter durch Verwendung von <code>[Beispielwort]{.neuer-begriff}</code> grün eingefärbt werden und fett gedruckt sind: <span class="neuer-begriff">Beispielwort</span>. Dabei werden die Eigenschaften der geschweiften Klammer auf alle Inhalte der eckigen Klammer angewendet. Änderungen in der .css-Datei werden dann global auf alle Elemente angewendet, sodass diese nicht einzeln geändert werden müssen. Die Verwendung einer .css-Datei kann im YAML-Header geregelt werden.</p>
 <pre><code>format:
   html: 
     css: cssdatei.css</code></pre>
 <p>Damit diese Elemente auch in der PDF-Ausgabe funktionieren können diese Einstellungen analog in LaTeX definiert werden:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\neuerbegriff</span>}{<span class="fu">\textcolor</span>{green}}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\neuerbegriff</span>}{<span class="fu">\textcolor</span>{green}}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>(Anmerkung: Dieses Beispiel ist lediglich grün, aber nicht fett gedruckt.) Auch diese Verwendung wird über den YAML-Header geregelt.</p>
 <pre><code>format:
   pdf: 
     include-in-header:
       - macros.tex</code></pre>
-<p>Für eine fortgeschrittene Anwendungsmöglichkeit siehe <a href="#sec-callout-custom" class="quarto-xref">Kapitel&nbsp;4.1.2.1</a>. Eine kleine Auswahl an Beispielen für Stylesheets anderer Projekte mit unterschiedlichem Grad an Komplexität können hier gefunden werden:</p>
+<p>Für eine fortgeschrittene Anwendungsmöglichkeit siehe <a href="#sec-callout-custom" class="quarto-xref">Kapitel&nbsp;4.2.0.1</a>. Eine kleine Auswahl an Beispielen für Stylesheets anderer Projekte mit unterschiedlichem Grad an Komplexität können hier gefunden werden:</p>
 <ul>
 <li><p><a href="https://github.com/hadley/r4ds/blob/main/r4ds.scss">R for data science</a></p></li>
 <li><p><a href="https://github.com/OpenIntroStat/ims/blob/main/scss/ims-style.scss">Introduction to Modern Statistics HTML Stylesheet</a></p></li>
 <li><p><a href="https://github.com/OpenIntroStat/ims/blob/main/latex/ims-style.tex">Introduction to Modern Statistics PDF/LaTeX Stylesheet</a></p></li>
 </ul>
 </section>
-<section id="callout-blocks" class="level3">
-<h3 class="anchored" data-anchor-id="callout-blocks">Callout Blocks</h3>
-<p>Callout Blocks eignen sich inbesondere dazu, textuelle Inhalte hervorzuheben. Callout Blocks können umfangreich angepasst werden und Elemente wie Grafiken oder Code-Blöcke enthalten. Die Typen werden mit der Spracheinstellung im YAML-Header <code>lang: de</code> lokalisiert.</p>
+</section>
+<section id="callout-blocks" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="callout-blocks"><span class="header-section-number">4.2</span> Callout Blocks</h2>
+<p>Callout Blocks eignen sich dazu, ausgewählte Inhalte hervorzuheben. Callout Blocks können umfangreich angepasst werden.</p>
 <pre><code>:::{.callout-note}
 Es gibt fünf Typen von callouts: 
 `note`, `tip`, `warning`, `caution`, und `important`.
@@ -566,7 +621,7 @@ Auklappbarer Callout Block
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><code>collapse="true"</code> macht den Tipp in HTML aufklappbar, z. B. um Tipps zu Aufgaben zu geben.</p>
+<p><code>{.callout-important collapse="true"}</code> macht den Tipp in HTML aufklappbar, z. B. um Tipps zu Aufgaben zu geben. Wird das Argument <code>collapse=False</code> übergeben, ist der Callout Block zu Beginn aufgeklappt.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -577,7 +632,14 @@ Callouts können auch verschachtelt werden
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Die erste Überschrift im Markdownformat wird als Titel benutzt, wenn keiner spezifiziert wurde.</p>
+<p>Die erste Überschrift im Markdownformat wird als Titel benutzt, wenn keiner in der geschweiften Klammer mit dem Argument <code>title=Titel</code> spezifiziert wurde.</p>
+<div class="cell">
+<pre class="raw cell-code"><code>
+:::: {.callout-tip}
+# Callouts können auch verschachtelt werden
+::::
+</code></pre>
+</div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -597,6 +659,63 @@ Das Symbol kann unterdrückt werden
 </div>
 </div>
 <p>Siehe dazu: <a href="https://quarto.org/docs/authoring/callouts.html">Quarto Callout Blocks</a></p>
+<p>Callout Blocks werden mit der Spracheinstellung im YAML-Header lokalisiert.</p>
+<div class="cell">
+<pre class="raw cell-code"><code>## Spracheinstellungen / language settings
+lang: de
+language:
+  de:
+    crossref-imp-title: "Definition"
+    crossref-imp-prefix: "Definition"
+    crossref-lst-title: "Code-Block"
+    crossref-lst-prefix: "Code-Block"
+    crossref-nte-title: "Beispiel"
+    crossref-nte-prefix: "Beispiel"
+    crossref-tip-title: "Tipp"
+    crossref-tip-prefix: "Tipp"
+    crossref-wrn-title: "Hinweis"
+    crossref-wrn-prefix: "Hinweis"</code></pre>
+</div>
+<p>Damit die Lokalisierung wirksam wird, muss für den Callout Block eine ID vergeben werden. Die ID muss an erster Stelle stehen und besteht aus einer <code>#</code> und einem reservierten Kürzel (siehe <a href="#sec-Querverweise" class="quarto-xref">Kapitel&nbsp;4.4</a>).</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wichtig
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Callout Block vom Typ important ohne ID.<br>
+<code>{.callout-important}</code></p>
+</div>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="imp-ID" class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition&nbsp;1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Callout Block vom Typ important mit ID.<br>
+<code>{#imp-ID .callout-important}</code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <section id="sec-callout-custom" class="level4">
 <h4 class="anchored" data-anchor-id="sec-callout-custom">Definieren von eigenen Callout-Umgebungen</h4>
 <p>Mit folgendem Vorgehen lassen sich eigene Callout-Umgebungen definieren wobei diese zum jetzigen Stand (April 2024) in der PDF farblich nicht anpassbar sind.</p>
@@ -608,117 +727,117 @@ Das Symbol kann unterdrückt werden
 _quarto.yml
 mein_dokument.qmd</code></pre>
 <p>Die _<em>extension.yml</em> listet dabei alle benutzten Filter auf, in diesem Fall <em>callout_definition.lua</em>. Hier lässt sich auch eine <em>.scss</em> Datei unterbringen, in der die Änderungen am Aussehen der HTML gepeichert sind. Diese werden dann in der Datei _quarto.yml mit <em>courseformat-html</em> aufgerufen.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Course Page Format</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Marc Fehr</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0.0</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">contributes</span><span class="kw">:</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">formats</span><span class="kw">:</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> theme.scss</span><span class="kw">]</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> callout_definition.lua</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Course Page Format</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Marc Fehr</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0.0</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">contributes</span><span class="kw">:</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">formats</span><span class="kw">:</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> theme.scss</span><span class="kw">]</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">filters</span><span class="kw">:</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> callout_definition.lua</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Die Definition des Filters und damit der eigenen Callout-Umgebung sieht folgendermaßen aus:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Div<span class="op">(</span><span class="va">div</span><span class="op">)</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- process exercise</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">div</span><span class="op">.</span><span class="va">classes</span><span class="op">:</span>includes<span class="op">(</span><span class="st">"callout-definition"</span><span class="op">)</span> <span class="cf">then</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- default title</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> <span class="va">title</span> <span class="op">=</span> <span class="st">"Definition"</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Use first element of div as title if this is a header</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">~=</span> <span class="kw">nil</span> <span class="kw">and</span> <span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">[</span><span class="dv">1</span><span class="op">].</span><span class="va">t</span> <span class="op">==</span> <span class="st">"Header"</span> <span class="cf">then</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>      <span class="va">title</span> <span class="op">=</span> <span class="va">pandoc</span><span class="op">.</span><span class="va">utils</span><span class="op">.</span>stringify<span class="op">(</span><span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">[</span><span class="dv">1</span><span class="op">])</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">:</span><span class="fu">remove</span><span class="op">(</span><span class="dv">1</span><span class="op">)</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- return a callout instead of the Div</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">quarto</span><span class="op">.</span>Callout<span class="op">({</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">type</span> <span class="op">=</span> <span class="st">"definition"</span><span class="op">,</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>      <span class="va">content</span> <span class="op">=</span> <span class="op">{</span> <span class="va">pandoc</span><span class="op">.</span>Div<span class="op">(</span><span class="va">div</span><span class="op">)</span> <span class="op">},</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>      <span class="va">title</span> <span class="op">=</span> <span class="va">title</span><span class="op">,</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>      <span class="va">collapse</span> <span class="op">=</span> <span class="kw">false</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Div<span class="op">(</span><span class="va">div</span><span class="op">)</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- process exercise</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">div</span><span class="op">.</span><span class="va">classes</span><span class="op">:</span>includes<span class="op">(</span><span class="st">"callout-definition"</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- default title</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> <span class="va">title</span> <span class="op">=</span> <span class="st">"Definition"</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Use first element of div as title if this is a header</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">~=</span> <span class="kw">nil</span> <span class="kw">and</span> <span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">[</span><span class="dv">1</span><span class="op">].</span><span class="va">t</span> <span class="op">==</span> <span class="st">"Header"</span> <span class="cf">then</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>      <span class="va">title</span> <span class="op">=</span> <span class="va">pandoc</span><span class="op">.</span><span class="va">utils</span><span class="op">.</span>stringify<span class="op">(</span><span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">[</span><span class="dv">1</span><span class="op">])</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">div</span><span class="op">.</span><span class="va">content</span><span class="op">:</span><span class="fu">remove</span><span class="op">(</span><span class="dv">1</span><span class="op">)</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- return a callout instead of the Div</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">quarto</span><span class="op">.</span>Callout<span class="op">({</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">type</span> <span class="op">=</span> <span class="st">"definition"</span><span class="op">,</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>      <span class="va">content</span> <span class="op">=</span> <span class="op">{</span> <span class="va">pandoc</span><span class="op">.</span>Div<span class="op">(</span><span class="va">div</span><span class="op">)</span> <span class="op">},</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>      <span class="va">title</span> <span class="op">=</span> <span class="va">title</span><span class="op">,</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>      <span class="va">collapse</span> <span class="op">=</span> <span class="kw">false</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In der <em>theme.scss</em> wird dann die Darstellung der callout-Umgebung festgelegt. Da es sich hier um eine reine HTML Anpassung handelt, findet sich das Resultat nur in der HTML-Ausgabe und nicht in der PDF. Über die Hexadezimalwerte können dabei die Farben gesteuert werden. In der PDF erscheint ein solcher Callout-Block dann in der Farbe Hellgrau. Im letzten (auskommentierten) Abschnitt lässt sich ein Symbol (beispielsweise ein Ausrufezeichen für eine Warnung-Umgebung) festlegen. Dabei wird auf die <em>Font Awesome</em>-Bibliothek zurückgegriffen.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- Importing fa icons --*/</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Exercise callout styling</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.callout-definition.callout</span> {</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-left-color</span>: <span class="cn">#aea545</span><span class="op">;</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.callout-definition.callout-style-default</span> <span class="op">&gt;</span> <span class="fu">.callout-header</span> {</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#474765</span><span class="op">;</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co">/* Hier kann man ein Icon hinzufügen</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">.callout-definition &gt; .callout-header::before {</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co">  font-family: "Font Awesome 5 Free";</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co">  content: "\f303";</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co">  margin-right: 10px;</span></span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co">}</span></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- Importing fa icons --*/</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Exercise callout styling</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.callout-definition.callout</span> {</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-left-color</span>: <span class="cn">#aea545</span><span class="op">;</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.callout-definition.callout-style-default</span> <span class="op">&gt;</span> <span class="fu">.callout-header</span> {</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#474765</span><span class="op">;</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="co">/* Hier kann man ein Icon hinzufügen</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="co">.callout-definition &gt; .callout-header::before {</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="co">  font-family: "Font Awesome 5 Free";</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="co">  content: "\f303";</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co">  margin-right: 10px;</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co">}</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <style type="text/css">
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");div.callout-definition.callout{border-left-color:#aea545}div.callout-definition.callout-style-default>.callout-header{background-color:#474765}
 </style>
 </div>
 </section>
-<section id="verwendungsvorschlag-für-die-bausteine" class="level4">
-<h4 class="anchored" data-anchor-id="verwendungsvorschlag-für-die-bausteine">Verwendungsvorschlag für die Bausteine</h4>
+<section id="sec-Verwendungsvorschlag" class="level3">
+<h3 class="anchored" data-anchor-id="sec-Verwendungsvorschlag">Verwendungsvorschlag Callout Blocks in den Bausteinen</h3>
+<p>Callout Blocks sollten immer eine ID erhalten (siehe <a href="#sec-Querverweise" class="quarto-xref">Kapitel&nbsp;4.4</a>).</p>
 <div id="nte-Beispiel" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note&nbsp;1: Beispiel Note
+Beispiel&nbsp;1: Beispiel note
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><em><code>callout-note</code> für Beispiele</em><br>
-Querverweis mit <code>#nte-ID</code> <strong>Nicht von <code>lang: de</code>, keine crossref-Option betroffen</strong></p>
+Querverweis mit <code>#nte-ID</code></p>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled">
+<div id="imp-Beispiel" class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Definition Begriff XY
+Definition&nbsp;2: Beispiel important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em><code>callout-important</code> für Definitionen - der definierte Begriff wird als Überschrift verwendet.</em> <strong>Ggf. grau</strong><br>
-Querverweis mit <code>#imp-ID</code></p>
+<p><em><code>callout-important</code> für Definitionen - der definierte Begriff wird als Überschrift verwendet.</em> Querverweis mit <code>#imp-ID</code></p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div id="tip-Beispiel" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tipp
+Tipp&nbsp;1: Beispiel tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em><code>callout-tip</code> aufklappbar für Lösungshilfen und Lösungen</em><br>
 Querverweis mit <code>#tip-ID</code></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-warning callout-titled">
+<div id="wrn-Beispiel" class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hinweis
+Hinweis&nbsp;3: Beispiel warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -726,74 +845,135 @@ Hinweis
 Querverweis mit <code>#wrn-ID</code></p>
 </div>
 </div>
-<p><strong>Achtung</strong> Der Querverweis auf einen Callout Block bleibt Englisch: <a href="#nte-Beispiel" class="quarto-xref">Note&nbsp;1</a>. Dass kann man aber notfalls manuell lösen: <a href="#nte-Beispiel" class="quarto-xref">Querverweis auf Hinweis&nbsp;1</a>:</p>
 </section>
 </section>
-<section id="Querverweise" class="level3">
-<h3 class="anchored" data-anchor-id="Querverweise">Querverweise</h3>
-<p>Um Querverweise zu setzen, muss das Zielelement mit einer ID versehen werden. Elementen (z. B. Code-Blöcke, Grafiken, Überschriften) wird eine ID in geschweiften Klammern übergeben, die ID muss innerhalb der Klammer an erster Stelle stehen. Ein Beispiel, in dem für die eingebundene Grafik eine ID vergeben sowie die Größe der Grafik mit der Option <code>width</code> eingestellt wird:</p>
-<p><code>![](grafiken/working_code_CC0){#fig-programmieren width="33%"}</code></p>
-<div id="fig-programmieren" class="quarto-figure quarto-figure-center quarto-float anchored" width="33%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-programmieren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="grafiken/working_code_CC0.svg" id="fig-programmieren" class="img-fluid figure-img" style="width:33.0%">
+<section id="tabset-panel" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="tabset-panel"><span class="header-section-number">4.3</span> Tabset Panel</h2>
+<p><a href="https://quarto.org/docs/interactive/layout.html#tabset-panel">Tabset Panel</a> erlauben die Präsentation von Inhalten in Reitern. Diese werden mit einer Div <code>{.panel-tabset}</code> gesetzt, innerhalb derer neue Reiter durch eine Überschrift hinzugefügt werden <code>## Python</code>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Output</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Grafik</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World from Python!"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-programmieren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1
-</figcaption>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Hello World from R!"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World from Python!</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello World from R!"</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="bcd-styleguide_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="576"></p>
 </figure>
 </div>
-<p>Mit der ID kann ein Querverweis auf die Abbildung gesetzt werden: <code>@fig-programmieren</code> erzeugt den Querverweis <a href="#fig-programmieren" class="quarto-xref">Abbildung&nbsp;1</a>. Der Verweistext kann angepasst werden: <code>[Grafik @fig-programmieren]</code> erzeugt den Querverweis <a href="#fig-programmieren" class="quarto-xref">Grafik&nbsp;1</a>.</p>
-<p>Sowohl die ID der Grafik als auch der Querverweis beinhalten ein Präfix, das den Typ des Elements ausweist.</p>
-<div class="callout callout-style-simple callout-warning callout-titled" title="Hinweis Reservierte Präfixe">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-Querverweise" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-Querverweise"><span class="header-section-number">4.4</span> Nummerierte Beschriftungen und Querverweise</h2>
+<p>Um nummerierte Beschriftungen und Querverweise zu setzen, muss das Zielelement mit einer ID versehen werden. Elementen (z. B. Code-Blöcke, Grafiken, Überschriften) wird eine ID in geschweiften Klammern übergeben, die ID muss innerhalb der geschweiften Klammer an erster Stelle stehen und beginnt mit einer <code>#</code>, gefolgt von einem typabhängigen, reservierten Präfix. Anschließend folgt eine beschreibende Zeichenkette, um das Zielelementen von anderen Elementen des gleichen Typs zu unterscheiden. Auf diese Weise werden auch Überschriften querverwiesen.</p>
+<div id="wrn-prefixlist" class="callout callout-style-simple callout-warning callout-titled" title="Hinweis reservierte Präfixe">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hinweis Reservierte Präfixe
+Hinweis&nbsp;4: Hinweis reservierte Präfixe
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>In Quarto sind verschiedene Präfixe für die Erstellung von Querverweisen reserviert: fig, tbl, lst, tip, nte, wrn, imp, cau, thm, lem, cor, prp, cnj, def, exm, exr, sol, rem, eq, sec.</p>
 </div>
 </div>
-<p>&nbsp; Siehe dazu: <a href="https://quarto.org/docs/authoring/cross-references.html">Quarto Cross References</a></p>
+<p>Der Callout Block vom Typ Hinweis im Abschnitt <a href="#sec-Verwendungsvorschlag" class="quarto-xref">Kapitel&nbsp;4.2.1</a> hat die ID <code>#nte-Beispiel</code>. Der Querverweis auf diesen Callout Block lautet <code>@nte-Beispiel</code>: <a href="#nte-Beispiel" class="quarto-xref">Beispiel&nbsp;1</a>.</p>
+<p>(Siehe dazu: <a href="https://quarto.org/docs/authoring/cross-references.html">Quarto Cross References</a>)</p>
+<p>Grafiken erhalten das Präfix <code>fig</code>. In diesem Beispiel wird eine ID vergeben sowie die Größe der Grafik mit der Option <code>width</code> eingestellt:</p>
+<p><code>![](skript/00-bilder/working_code_CC0){#fig-programmieren width="33%"}</code></p>
+<div id="fig-programmieren" class="quarto-figure quarto-figure-center quarto-float anchored" width="33%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-programmieren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="skript/00-bilder/working_code_CC0.svg" id="fig-programmieren" class="img-fluid figure-img" style="width:33.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-programmieren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1
+</figcaption>
+</figure>
+</div>
+<p>Mit der ID kann ein Querverweis auf die Abbildung gesetzt werden: <code>@fig-programmieren</code> erzeugt den Querverweis <a href="#fig-programmieren" class="quarto-xref">Abbildung&nbsp;1</a>.</p>
 </section>
-</section>
-<section id="grafiken" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="grafiken"><span class="header-section-number">4.2</span> Grafiken</h2>
-<p>Grafiken können lokal oder aus dem Internet eingebunden werden. Der lokale Dateipfad wird ausgehend vom aktuellen Arbeitsverzeichnis angegeben. <em>Grafiken werden im Unterordner “grafiken” abgelegt</em>.</p>
-<dl>
-<dt>Speicherort Grafiken</dt>
-<dd>
-<em>Unterordner im Arbeitsverzeichnis “grafiken”</em>
-</dd>
-</dl>
-<p>Die Syntax lautet:</p>
-<p><code>![Grafiküberschrift](grafiken/Dateiname_Dateiname Dateiname.png)</code><br>
+<section id="grafiken" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="grafiken"><span class="header-section-number">4.5</span> Grafiken</h2>
+<p>Grafiken können lokal oder aus dem Internet eingebunden werden. Der lokale Dateipfad wird ausgehend vom aktuellen Arbeitsverzeichnis angegeben. Die Syntax lautet:</p>
+<p><code>![Grafiküberschrift](skript/00-bilder/Dateiname_Dateiname Dateiname.png)</code><br>
 <code>![Grafiküberschrift](https://beispiellink.de/einbild.png)</code></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div id="wrn-absoluterpfad" class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Arbeitsverzeichnis ermitteln
+Hinweis&nbsp;5: absolute Dateipfade vermeiden
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Grafiken können mit einem absoluten Dateipfad (mit führendem <code>/</code>) oder mit einem relativen Dateipfad eingebunden werden.</p>
+<ul>
+<li><p>absolut: <code>![Grafiküberschrift](/skript/00-bilder/Dateiname.png)</code></p></li>
+<li><p>relativ: <code>![Grafiküberschrift](skript/00-bilder/Dateiname.png)</code></p></li>
+</ul>
+<p>Das Einbinden über absolute Dateipfade ist fehleranfällig uns sollte vermieden werden.</p>
+</div>
+</div>
+<dl>
+<dt>Speicherort Grafiken</dt>
+<dd>
+<em>Im Skript verwendete Grafiken werden im Unterordner “skipt/00-bilder” abgelegt.</em>
+</dd>
+<dd>
+<em>Für Aufgabenstellungen verwendete Grafiken werden im Unterordner “aufgaben/00-bilder” abgelegt.</em>
+</dd>
+</dl>
+<div id="tip-arbeitsverzeichnis" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp&nbsp;2: Arbeitsverzeichnis ermitteln
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Das aktuelle Arbeitsverzeichnis kann mit einem Codeblock mit dem entsprechenden Befehl angezeigt werden (hier ohne Ausgabe):</p>
 <p>In R:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">getwd</span>())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">getwd</span>())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In Python:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -805,37 +985,26 @@ Arbeitsverzeichnis ermitteln
 cap-location: bottom
 fig-align: center
 ---</code></pre>
-<div class="callout callout-style-simple callout-warning callout-titled">
+<div id="wrn-Beschriftung" class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hinweis
+Hinweis&nbsp;6: Grafiken ohne Beschriftung
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[20, 80]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
-<p><img src="grafiken/working_code_CC0.svg" class="img-fluid" alt="Eine Person programmiert am Computer"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
+<p><img src="skript/00-bilder/working_code_CC0.svg" class="img-fluid" style="width:10.0%" alt="Eine Person programmiert am Computer"></p>
 <p>Eine Grafik ohne Beschriftung oder <code>#fig-ID</code> folgt der globalen Einstellung nicht. Das obenstehende Bild steht in HTML linksbündig, obwohl im YAML-Header <code>fig-align: center</code> konfiguriert ist. Quarto unterscheidet intern zwischen unbeschrifteten Bildern (image) und beschrifteten Grafiken (figure). Siehe <a href="https://github.com/quarto-dev/quarto-cli/issues/6509#issuecomment-1677657369" class="uri">https://github.com/quarto-dev/quarto-cli/issues/6509#issuecomment-1677657369</a>.</p>
 </div>
 </div>
-</div>
-</div>
-</div>
 <p>Grafikoptionen können auch elementweise gesetzt werden. Optionen für einzelne Grafiken werden in geschweiften Klammern übergeben und mehrere Optionen durch Leerzeichen voneinander getrennt. Im folgenden Beispiel wird eine <code>#fig-ID</code> vergeben, ein Alternativtext mit <code>fig-alt=""</code> angelegt, die Ausrichtung mit <code>fig-align=""</code> linksbündig sowie die Größe der Grafik mit <code>width=""</code> eingestellt. <code>width</code> stellt die Breite der Grafik ein, die Höhe wird automatisch berechnet.</p>
-<p><code>![Grafik mit elementweiser Option "left"](grafiken/working_code_CC0.png){#fig-Grafik-mit-Optionen fig-alt="Eine Person programmiert am Computer" fig-align="left" width="33%"}</code></p>
-<div id="fig-Grafik-mit-Optionen" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left" alt="Eine Person programmiert am Computer">
+<p><code>![Grafik mit elementweiser Option "left"](skript/00-bilder/working_code_CC0.png){#fig-Grafik-mit-Optionen fig-alt="Eine Person programmiert am Computer" fig-align="left" width="33%"}</code></p>
+<div id="fig-Grafik-mit-Optionen" class="quarto-figure quarto-figure-left quarto-float anchored" alt="Eine Person programmiert am Computer" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Grafik-mit-Optionen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="grafiken/working_code_CC0.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:33.0%" alt="Eine Person programmiert am Computer">
+<img src="skript/00-bilder/working_code_CC0.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:33.0%" alt="Eine Person programmiert am Computer">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Grafik-mit-Optionen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;2: Grafik mit elementweiser Option “left”
@@ -848,41 +1017,38 @@ Abbildung&nbsp;2: Grafik mit elementweiser Option “left”
 <em>Globale Einstellungen zentriert</em> <code>fig-align: center</code>
 </dd>
 <dd>
-Beschriftung unterhalb <code>cap-location: bottom</code>
+<em>Beschriftung unterhalb</em> <code>cap-location: bottom</code>
 </dd>
 <dd>
 <em>Einbindung mit</em> <code>#fig-ID</code> <em>und Alternativtext</em> <code>fig-alt="Alternativtext"</code> <em>(ausgenommen dekorative Grafiken)</em>
 </dd>
 </dl>
-</section>
-<section id="dekorative-grafiken" class="level3">
-<h3 class="anchored" data-anchor-id="dekorative-grafiken">Dekorative Grafiken</h3>
-<p><em>Dekorative Grafiken werden ohne <code>fig-ID</code> eingebunden und erhalten ein Leerzeichen als Titel: <code>[&amp;nbsp;](grafiken/Dateipfad)</code>. Dekorative Grafiken werden nicht im Quellenverzeichnis nachgewiesen, um dieses nicht mit inhaltlich nicht relevanten Quellen zu überladen. Dekorative Grafiken erhalten einen Lizenzhinweis nach der TULLU(BA)-Regel in einer Div <code>::: {.border}</code>.</em></p>
+<p><em>Dekorative Grafiken werden ohne <code>fig-ID</code> eingebunden und erhalten ein Leerzeichen als Titel: <code>[&amp;nbsp;](skript/00-bilder/Dateipfad)</code>. Nicht gemeinfreie Grafiken erhalten einen Lizenzhinweis nach der TULLU(BA)-Regel in einer umrahmten Div <code>::: {.border}</code>.</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="grafiken/festmahl-PCL.svg" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="skript/00-bilder/festmahl-PCL.svg" class="img-fluid figure-img" style="width:50.0%" alt="Dekoratives Bild einer am gedeckten Tisch sitzenden Gesellschaft aus vier Personen. Ein Mann ist aufgestanden, um einen Toast auszusprechen."></p>
 <figcaption>&nbsp;</figcaption>
 </figure>
 </div>
 <div class="border">
-<p>Toast Dining Eating von OpenClipart-Vectors ist lizensiert unter <a href="https://pixabay.com/service/license-summary/">Pixabay Content License</a>. Das Werk ist abrufbar auf <a href="https://pixabay.com/vectors/toast-dining-eating-event-festive-153723/">Pixabay</a>.</p>
+<p>Toast Dining Eating von OpenClipart-Vectors ist lizensiert unter <a href="https://pixabay.com/service/license-summary/">Pixabay Content License</a>. Das Werk ist abrufbar auf <a href="https://pixabay.com/vectors/toast-dining-eating-event-festive-153723/">Pixabay</a>. 2013</p>
 </div>
 </section>
-<section id="bcd-nutzung-von-vektorgrafiken" class="level3">
-<h3 class="anchored" data-anchor-id="bcd-nutzung-von-vektorgrafiken">BCD Nutzung von Vektorgrafiken</h3>
+<section id="nutzung-von-vektorgrafiken" class="level3">
+<h3 class="anchored" data-anchor-id="nutzung-von-vektorgrafiken">Nutzung von Vektorgrafiken</h3>
 <p>Die Bausteine sind für den Export in HTML und PDF konzipiert. Der Export von Grafiken nach PDF erfolgt über LaTeX und eine PDF-Renderengine. Somit werden nur Formate unterstützt, die in LaTex und in PDF unterstützt werden. Dies betrifft insbesondere</p>
 <ul>
 <li><p>Vektorgrafiken: Um Vektorgrafiken im Format SVG zu verarbeiten, wird die Bibliothek <code>Librsvg</code> benötigt. Siehe: <a href="https://quarto.org/docs/prerelease/1.3/pdf.html">Quarto: PDF Format Improvements</a>. Werden SVG-Grafiken mit Dateiendung (titel.svg) eingebunden, wandelt Quarto die Bilder automatisch in das PDF-Format um.</p></li>
 <li><p>GIF: Das PDF-Format unterstützt animierte Bilddateien nicht bzw. nur in bestimmten Kombinationen aus Renderengine und PDF Reader. Quartos Standardengine TinyteX unterstützt animierte Bilddateien nicht.</p></li>
 </ul>
-<p><code>![Grafiküberschrift](Unterordner/Dateiname_Dateiname Dateiname)</code></p>
-<p><em>Das im jeweiligen Exportformat verwendete Grafikformat wird im YAML-Header definiert.</em></p>
+<p>Das für Grafiken verwendete Format kann global im YAML-Header definiert werden.</p>
 <pre><code>format:
   html:
     default-image-extension: svg
   pdf:
     cite-method: biblatex
     default-image-extension: pdf</code></pre>
+<p>Dann können Grafiken ohne Dateiendung eingebunden werden. Quarto lädt dann automatisch das im YAML-Header definierte Dateiformat. <code>![Grafiküberschrift](Unterordner/Dateiname_ohne Dateiendung)</code></p>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -905,8 +1071,8 @@ Hinweis
 </code></pre>
 </section>
 </section>
-<section id="videos-und-h5p-elemente" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="videos-und-h5p-elemente"><span class="header-section-number">4.3</span> Videos und H5P-Elemente</h2>
+<section id="videos-und-h5p-elemente" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="videos-und-h5p-elemente"><span class="header-section-number">4.6</span> Videos und H5P-Elemente</h2>
 <dl>
 <dt>Speicherort von Videos</dt>
 <dd>
@@ -930,97 +1096,118 @@ Hinweis
 <section id="h5p-elemente" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="h5p-elemente">H5P-Elemente</h3>
 <p>H5P-Elemente können exportiert als all-in-one HTML file eingebunden werden. Die Syntax lautet:</p>
-<pre class="raw"><code>{=html}
+<div class="cell">
+<pre class="raw cell-code"><code>{=html}
 {{&lt; include Beispiel.html &gt;}}</code></pre>
+</div>
 </section>
 </section>
-<section id="programmcode-1" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="programmcode-1"><span class="header-section-number">4.4</span> Programmcode</h2>
+<section id="programmcode-1" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="programmcode-1"><span class="header-section-number">4.7</span> Programmcode</h2>
 <p>Code wird mit folgender Syntax eingebunden:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo Welt</code></pre>
 </div>
 </div>
 <p>Dabei können verschiedene <em>Flags</em> gesetzt werden. Diese Flags können entweder lokal in der Programmierumgebung oder aber global in der yml-Datei gesetzt werden.</p>
-<p>Mit <em>#| echo: false</em> (standartmäßig <strong>true</strong>) kann die Ausgabe des Codes unterdrückt werden. Es wird im Ausgabedokument dann auch nur die Ausgabe des Codes dargestellt.</p>
-<pre class="quarto"><code>::: {.cell}
-::: {.cell-output .cell-output-stdout}
-
-```
-Hallo Welt
-```
-
-
-:::
-:::</code></pre>
+<p>Mit <em>#| echo: false</em> (standartmäßig <strong>true</strong>) kann die Darstellung des Codes unterdrückt werden.</p>
+<p>``` {python}<br>
+#| echo: false<br>
+print(“Hallo Welt”)<br>
+```</p>
+<p>Im erzeugten Dokument wird dann nur die Ausgabe des Codes dargestellt (die folgende Codezelle wird nicht dargestellt):</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo Welt</code></pre>
 </div>
 </div>
-<p>Im Gegensatz dazu bestimmt <em>#| output: false</em> (standartmäßig <strong>true</strong>) ob die Ausgabe des Codes dargestellt werden soll. Mit <em>#| output: asis</em> wird der Ouput als unformatierter Text dargestellt:</p>
+<p>Im Gegensatz dazu bestimmt <em>#| output: false</em> (standartmäßig <strong>true</strong>), dass der Code ohne Ausgabe dargestellt werden soll.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: false</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: false</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="in">print("Hallo Welt")</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="optionen-codeblöcke-bitte-ergänzen" class="level3">
-<h3 class="anchored" data-anchor-id="optionen-codeblöcke-bitte-ergänzen">Optionen Codeblöcke (bitte ergänzen)</h3>
-<pre><code>#| include: true # = output + echo
-#| label: load-packages
-#| results: hold # process code first, then print output</code></pre>
-<p><strong>Ergänzen: Optionen Im YAML-Header, Elementspezifische Optionen, Optionen für programmierte Grafiken</strong></p>
-</section>
-<section id="yaml-header-bitte-ergänzen-ggf.-oben-einfügen" class="level3">
-<h3 class="anchored" data-anchor-id="yaml-header-bitte-ergänzen-ggf.-oben-einfügen">YAML-Header (bitte ergänzen, ggf. oben einfügen)</h3>
-<pre><code>format:
+<p>Mit <em>#| output: asis</em> wird der Code ohne umschließende Codezellen-Formatierung dargestellt:</p>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hallo Welt"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Hallo Welt</p>
+<p>Für die Code-Ausführung mit knitr (R-Code, Python-Code via reticulate) bewirkt das Flag <em>#| results: hold</em> eine zusammenhängende Codeausführung.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Python results: hold</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">R results: hold</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 Ausgaben mit Python</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ausgabe 1"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ausgabe 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ausgabe 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ausgabe 2</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 Ausgaben mit Python und gesetztem Flag results: hold</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ausgabe 1"</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ausgabe 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ausgabe 1
+Ausgabe 2</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 Ausgaben mit R</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Ausgabe 1"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Ausgabe 1"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Ausgabe 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Ausgabe 2"</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 Ausgaben mit R und gesetztem Flag results: hold</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Ausgabe 1"</span>)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Ausgabe 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Ausgabe 1"
+[1] "Ausgabe 2"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Quarto bietet darüber hinaus weitere Konfigurationsmöglichkeiten für die Präsentation von Programmcode (<a href="https://quarto.org/docs/output-formats/html-code.html#overview">siehe Dokumentation</a>).</p>
+<section id="code-kopieren" class="level3">
+<h3 class="anchored" data-anchor-id="code-kopieren">Code kopieren</h3>
+<p><em>Im YAML-Header wird per Option die Kopierfläche für Programmcode aktiviert.</em> (Standard ist das Sichtbarwerden beim Herüberfahren mit der Maus, code-copy: hover.)</p>
+<div class="cell">
+<pre class="raw cell-code"><code>format:
   html:
-    code-copy: true</code></pre>
+    code-copy: true # hover is default</code></pre>
+</div>
 </section>
-<section id="optionen-für-programmierte-grafiken-bitte-ergänzen" class="level3">
-<h3 class="anchored" data-anchor-id="optionen-für-programmierte-grafiken-bitte-ergänzen">Optionen für programmierte Grafiken (bitte ergänzen)</h3>
+<section id="optionen-für-programmierte-grafiken" class="level3">
+<h3 class="anchored" data-anchor-id="optionen-für-programmierte-grafiken">Optionen für programmierte Grafiken</h3>
+<p>Die in den Bausteinen verwendeten Optionen zur Gestaltung programmierter Grafiken sind im folgenden Block kurz erläutert.</p>
 <pre><code>#| fig-cap: "Beschriftung"
-#| label: fig-ID
+#| label: fig-ID "ID für Querverweise"
 #| fig-alt: "Alternativtext"
 #| fig-width: "Breite der Grafik als lokale Einstellung, in der Priorität über globaler Einstellung im YAML-Header"
 #| fig-height: "Höhe der Grafik als lokale Einstellung, in der Priorität über globaler Einstellung im YAML-Header"
 #| fig-asp: "Seitenverhältnis der Grafik als lokale Einstellung, in der Priorität über globaler Einstellung im YAML-Header"</code></pre>
-</section>
-<section id="mehrsprachige-codebeispiele" class="level3">
-<h3 class="anchored" data-anchor-id="mehrsprachige-codebeispiele">Mehrsprachige Codebeispiele</h3>
-<p>Für die Präsentation von Programmcode in mehreren Sprachen und/oder des erzeugten Outputs können <a href="https://quarto.org/docs/interactive/layout.html#tabset-panel">Tabset Panel</a> genutzt werden. Diese werden mit einer Div <code>{.panel-tabset}</code> gesetzt, innerhalb derer neue Tabs durch eine Überschrift hinzugefügt werden <code>## Python</code>.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Output</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World from Python!"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Hello World from R!"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello World from Python!</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hello World from R!"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
 </section>
 </section>
 </section>
@@ -1035,9 +1222,9 @@ Hallo Welt
 <p>Neben den fachlichen Inhalten umfassen Methoden- und Anwendungsbausteine Codebeispiele für Python bzw. für R, die Studierenden die Bearbeitung von Übungsaufgaben und Projekten in der jeweiligen Programmierumgebung erlauben.</p>
 <p>Die Bausteine folgen einem einheitlichen Aufbau:</p>
 <ul>
-<li><p>Voraussetzungen</p>
+<li><p>Voraussetzungen (eingebundene seperate Markdown-Datei)</p>
 <ul>
-<li><p>Inhaltliche Voraussetzungen (eingebundene seperate Markdown-Datei.)</p></li>
+<li><p>Inhaltliche Voraussetzungen</p></li>
 <li><p>vorher zu bearbeitende Bausteine</p></li>
 <li><p>verwendete Pakete und Datensätze / -quellen</p></li>
 <li><p>geschätzte Bearbeitungszeit</p></li>
@@ -1057,13 +1244,17 @@ Hallo Welt
 </ul></li>
 <li><p>Prüfungsaufgaben (ohne Lösungen)</p></li>
 </ul>
-<section id="sprache" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="sprache"><span class="header-section-number">5.1</span> Sprache</h2>
+<section id="ordnerstruktur" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="ordnerstruktur"><span class="header-section-number">5.1</span> Ordnerstruktur</h2>
+<p>Die Ordnerstruktur für die Bausteine ist auf <a href="https://bausteine-der-datenanalyse.github.io/bcd-dokumentation/organisation.html">GitHub dokumentiert</a>.</p>
+</section>
+<section id="sprache" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sprache"><span class="header-section-number">5.2</span> Sprache</h2>
 <p>Die Ansprache der Leser:innen erfolgt in der Höflichkeitsform “Sie / Ihr”. Gegendert wird mit dem Doppelpunkt: Er:Sie ist Busfahrer:in. Es werden nur Personen gegendert. Nicht gegendert wird zum Beispiel: “die Anbieter von Plagiatserkennungssoftware”. Die Anbieter sind Unternehmen.</p>
 <p>Eine Alternative zum Gendern mit Doppelpunkt ist die Verlaufsform, z. B. “Studierende”.</p>
 </section>
-<section id="barrierefreiheit" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="barrierefreiheit"><span class="header-section-number">5.2</span> Barrierefreiheit</h2>
+<section id="barrierefreiheit" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="barrierefreiheit"><span class="header-section-number">5.3</span> Barrierefreiheit</h2>
 <p>Siehe <a href="https://digitale-lehre.uni-siegen.de/wp-content/uploads/2023/09/Checkliste_Barrierefreiheit-in-der-digitalen-Lehre_Sept23.pdf">Checklisten Barrierefreiheit</a> Checklisten: Barrierefreiheit in der digitalen Lehre. Hochschuldidaktik im digitalen Zeitalter.nrw; Kompetenzzentrum digitale Barrierefreiheit.nrw. CC BY 4.0.</p>
 </section>
 </section>
