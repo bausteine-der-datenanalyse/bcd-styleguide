@@ -55,7 +55,7 @@ toc: true
 toc-title:  |
   Leitfaden zur Erstellung von Bausteinen  
 
-  ![](skript/00-bilder/logo_bcd_new.svg)
+  ![](skript/00-bilder/logo_with_text_new.svg)
 number-sections: true
 number-depth: 2
 
@@ -247,7 +247,9 @@ Das Verhalten und Erscheinungsbild einzelner Elemente kann abweichend von den gl
 
   * In Python, R und Julia mit `#| option: parameter`
 
-  * In Observable JavaScript mit `//| option: parameter`
+  * In Graphviz und Observable JavaScript mit `//| option: parameter`
+
+  * In Mermaid mit `%%| option: parameter`
 
 * Objekte wie Überschriften, Callout Blocks, Divs, Grafiken und Tabellen werden mit geschweiften Klammern gesteuert `{option="parameter"}`
 

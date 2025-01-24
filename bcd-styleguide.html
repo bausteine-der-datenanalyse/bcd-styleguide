@@ -106,7 +106,7 @@ div.csl-indent {
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title"><p>Leitfaden zur Erstellung von Bausteinen</p>
-<p><img src="skript/00-bilder/logo_bcd_new.svg" class="img-fluid"></p></h2>
+<p><img src="skript/00-bilder/logo_with_text_new.svg" class="img-fluid"></p></h2>
    
   <ul>
   <li><a href="#einleitung" id="toc-einleitung" class="nav-link active" data-scroll-target="#einleitung"><span class="header-section-number">1</span> Einleitung</a></li>
@@ -192,7 +192,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2. Januar 2025</p>
+      <p class="date">24. Januar 2025</p>
     </div>
   </div>
   
@@ -387,7 +387,8 @@ Marc: Wenn man ein Quarto Projekt anlegt, kann man global den Pfad setzen.</p>
 <li><p>Codezellen werden durch führende Kommentarzeilen parametrisiert. (Anders als in R Markdown sollen Zelloptionen nicht in der geschweiften Klammer übergeben werden.)</p>
 <ul>
 <li><p>In Python, R und Julia mit <code>#| option: parameter</code></p></li>
-<li><p>In Observable JavaScript mit <code>//| option: parameter</code></p></li>
+<li><p>In Graphviz und Observable JavaScript mit <code>//| option: parameter</code></p></li>
+<li><p>In Mermaid mit <code>%%| option: parameter</code></p></li>
 </ul></li>
 <li><p>Objekte wie Überschriften, Callout Blocks, Divs, Grafiken und Tabellen werden mit geschweiften Klammern gesteuert <code>{option="parameter"}</code></p></li>
 </ul>
@@ -1000,7 +1001,7 @@ Hinweis&nbsp;6: Grafiken ohne Beschriftung
 </div>
 <p>Grafikoptionen können auch elementweise gesetzt werden. Optionen für einzelne Grafiken werden in geschweiften Klammern übergeben und mehrere Optionen durch Leerzeichen voneinander getrennt. Im folgenden Beispiel wird eine <code>#fig-ID</code> vergeben, ein Alternativtext mit <code>fig-alt=""</code> angelegt, die Ausrichtung mit <code>fig-align=""</code> linksbündig sowie die Größe der Grafik mit <code>width=""</code> eingestellt. <code>width</code> stellt die Breite der Grafik ein, die Höhe wird automatisch berechnet.</p>
 <p><code>![Grafik mit elementweiser Option "left"](skript/00-bilder/working_code_CC0.png){#fig-Grafik-mit-Optionen fig-alt="Eine Person programmiert am Computer" fig-align="left" width="33%"}</code></p>
-<div id="fig-Grafik-mit-Optionen" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left" alt="Eine Person programmiert am Computer">
+<div id="fig-Grafik-mit-Optionen" class="quarto-figure quarto-figure-left quarto-float anchored" alt="Eine Person programmiert am Computer" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Grafik-mit-Optionen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="skript/00-bilder/working_code_CC0.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:33.0%" alt="Eine Person programmiert am Computer">
